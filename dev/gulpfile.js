@@ -13,13 +13,9 @@ var notify = require('gulp-notify');
 var browserSync = require('browser-sync');
 
 // ******************** Change this
-// Variables
-var themeName = 'aiate';
-// var serverAlias = 'http://parlamentcatalunya.dev.sdos.es/';
-
 // Paths
 var IN = {
-  sass: 'assets/scss/*'
+  sass: 'assets/scss/'
 }
 
 var OUT = {
@@ -39,8 +35,7 @@ function customPlumber(errTitle) {
 // ******************** Tasks
 // Sass
 gulp.task('sass', function() {
-  return gulp.src(IN.sass + '*')
-    .pipe(newer(OUT.css + 'style.css'))
+  return gulp.src(IN.sass + 'style.scss')
     .pipe(autoprefixer())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('style.css', {newLine: ''}))
@@ -54,7 +49,7 @@ gulp.task('cache', function () {
 
 // Browser-sync
 gulp.task('browserSync', ['sass', 'cache'], function() {
-  browserSync.init([OUT.css + '*', './*.html'], {
+  browserSync.init([OUT.css + '*', IN.sass + '*', './*.html'], {
     server: {
         baseDir: "./"
     }
