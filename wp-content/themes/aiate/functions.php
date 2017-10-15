@@ -42,11 +42,6 @@ if ( ! function_exists( 'aiate_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'aiate' ),
-		) );
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -156,3 +151,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Navs
+register_nav_menu( 'nav', __( 'Nav', 'nav' ) );
+register_nav_menu( 'topbar_left', __( 'Topbar left', 'topbar_left' ) );
+register_nav_menu( 'topbar_right', __( 'Topbar right', 'topbar_right' ) );
