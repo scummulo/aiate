@@ -1,0 +1,27 @@
+// Forms
+// Input
+input[type="text"] {
+  background: none;
+  border: 0;
+  border: 1px solid #fff;
+  line-height: 40px;
+  font-weight: 100;
+  font-size: 1rem;
+  color: #fff;
+
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+
+  &:-ms-input-placeholder {
+    color: #fff;
+  }
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

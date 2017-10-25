@@ -1,16 +1,15 @@
 // Product card
 .product-card {
-
   .product-image {
     width: auto;
     height: 400px;
-    background: url('./assets/img/tie1.jpg') center center no-repeat;
+    background: url('./dist/assets/img/tie1.jpg') center center no-repeat;
     background-size: cover;
     -webkit-transition: .3s;
     transition: .3s;
 
     &:hover {
-      background-image: url('./assets/img/tie1b.jpg');
+      background-image: url('./dist/assets/img/tie1b.jpg');
     }
   }
 

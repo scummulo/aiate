@@ -1,6 +1,6 @@
 // Slider
 .slider {
-  height: 600px;
+  height: 70vh;
 
   .slide {
     height: 100%;
@@ -15,7 +15,7 @@
       align-items: center;
       height: 100%;
       width: 100%;
-      background: url('./dist/assets/img/slide2.jpg');
+      background: url('./dist/assets/img/slide1.jpg');
       background-size: cover;
 
       .featured {

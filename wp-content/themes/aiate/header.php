@@ -40,7 +40,7 @@
 			<div class="navbar">
 				<div class="container">
 					<div class="logo">
-						<img src="./assets/img/logo.svg" alt="">
+						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo.png" alt="aiate-logo">
 					</div>
 					<?php
 					wp_nav_menu( array(

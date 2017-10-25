@@ -1,0 +1,33 @@
+// Footer
+footer {
+  background-color: #333;
+  color: #fff;
+  font-weight: 100;
+  margin-top: 80px;
+
+  .newsletter-social {
+    padding: 60px 0;
+    text-align: center;
+
+    input {
+      width: 400px;
+      padding: 0 10px;
+      text-align: center;
+
+      + p {
+        font-size: 14px;
+        margin: 30px 0;
+      }
+    }
+
+    a {
+      padding: 0 15px;
+    }
+  }
+
+  .shop-info {
+    a {
+      display: block;
+    }
+  }
+}
