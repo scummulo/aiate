@@ -23,8 +23,12 @@
 		</div>
 		<div class="shop-info">
 			<div class="container">
-				<div class="row">
-					<div class="col">
+				<div class="row align-center">
+					<div class="col-xs-12 col-md-4">
+						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo">
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<span>Tiendas</span>
 						<p>
 							Calle Trajano 29 <br>
 							41002 Sevilla <br>
@@ -32,7 +36,7 @@
 							666 777 888
 						</p>
 					</div>
-					<div class="col">
+					<div class="col-xs-12 col-md-4">
 						<a href="#">Contacto</a>
 						<a href="#">FAQs</a>
 						<a href="#">Envíos</a>
