@@ -17,7 +17,6 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- Header -->
 	<header>
 		<nav>
 			<div class="topbar">

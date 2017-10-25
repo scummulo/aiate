@@ -155,3 +155,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 register_nav_menu( 'nav', __( 'Nav', 'nav' ) );
 register_nav_menu( 'topbar_left', __( 'Topbar left', 'topbar_left' ) );
 register_nav_menu( 'topbar_right', __( 'Topbar right', 'topbar_right' ) );
+
+show_admin_bar( false );

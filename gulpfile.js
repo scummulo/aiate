@@ -20,7 +20,7 @@ var serverAlias = 'http://localhost:8888/';
 // Paths
 var IN = {
   js: 'wp-content/themes/' + themeName + '/assets/js/',
-  sass: 'wp-content/themes/' + themeName + '/assets/scss/*'
+  sass: 'wp-content/themes/' + themeName + '/dist/styles/*'
 }
 
 var OUT = {
@@ -65,7 +65,7 @@ gulp.task('cache', function () {
 
 // Browser-sync
 gulp.task('browserSync', ['sass', 'scripts', 'cache'], function() {
-  browserSync.init([OUT.css + '*', IN.sass + '*', OUT.js + '*', './**/*.php'], {
+  browserSync.init([OUT.css + '*', IN.sass + '/*', OUT.js + '*', './**/*.php'], {
     proxy: serverAlias,
     port: 8080
   })
@@ -73,7 +73,7 @@ gulp.task('browserSync', ['sass', 'scripts', 'cache'], function() {
 
 // Watch
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch([IN.sass + '*.scss'], ['sass']);
+  gulp.watch([IN.sass + '/*.scss'], ['sass']);
   gulp.watch([IN.js + '*.js'], ['scripts']);
   gulp.watch( './**/*.php' ).on( 'change', function( file ) {
     browserSync.reload();

@@ -24,7 +24,7 @@
       <section class="featured-products">
         <h2 class="section-title">Productos destacados</h2>
         <div class="row">
-          <div class="product-card col">
+          <div class="product-card col-xs-12 col-sm-4">
             <div class="product-image"></div>
             <div class="product-info">
               <span class="category">Ties</span>
@@ -32,7 +32,7 @@
               <span class="price">24'99€</span>
             </div>
           </div>
-          <div class="product-card col">
+          <div class="product-card col-xs-12 col-sm-4">
             <div class="product-image"></div>
             <div class="product-info">
               <span class="category">Ties</span>
@@ -40,7 +40,7 @@
               <span class="price">24'99€</span>
             </div>
           </div>
-          <div class="product-card col">
+          <div class="product-card col-xs-12 col-sm-4">
             <div class="product-image"></div>
             <div class="product-info">
               <span class="category">Ties</span>

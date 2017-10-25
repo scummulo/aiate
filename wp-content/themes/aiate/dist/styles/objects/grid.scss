@@ -20,6 +20,15 @@ $container-max-widths: (
   xl: 1140px
 );
 
+// Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
 // Reset
 html {
   -webkit-box-sizing: border-box;
