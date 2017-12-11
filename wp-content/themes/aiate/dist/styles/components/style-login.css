@@ -1,0 +1,28 @@
+body.login #login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+body.login #login .logo {
+    width: 70%;
+    margin: 0 auto 60px;
+    display: block;
+}
+
+body.login #login #loginform {
+    margin: 0;
+    padding: 40px!important;
+    box-shadow: none;
+}
+
+#wp-submit {
+    background-color: #0A4056;
+    width: 100%;
+    border: 0;
+    margin-top: 15px;
+}

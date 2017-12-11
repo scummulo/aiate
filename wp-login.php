@@ -83,6 +83,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<?php
 
 	wp_enqueue_style( 'login' );
+	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/dist/styles/components/style-login.css' );
 
 	/*
 	 * Remove all stored post data on logging out.
@@ -181,7 +182,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	do_action( 'login_header' );
 	?>
 	<div id="login">
-		<h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php echo $login_header_text; ?></a></h1>
+		<img class="logo" src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo.png" alt="aiate-logo">
 	<?php
 
 	unset( $login_header_url, $login_header_title );
