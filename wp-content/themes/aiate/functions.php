@@ -157,3 +157,15 @@ register_nav_menu( 'topbar_left', __( 'Topbar left', 'topbar_left' ) );
 register_nav_menu( 'topbar_right', __( 'Topbar right', 'topbar_right' ) );
 
 show_admin_bar( false );
+
+// Excerpt
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+// Woocommerce
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}

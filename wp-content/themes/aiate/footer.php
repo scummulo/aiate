@@ -12,8 +12,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<input type="text" placeholder="Your email" name="" value="">
-						<p>Sign up for our newsletter to get the latest news and events from Aiate</p>
+						<h4>Newsletter</h4>
+						<input type="text" placeholder="Escribe tu correo electrónico" name="" value="">
+						<p>Suscríbete a nuestro newsletter para estar al día de todas nuestras novedades y ofertas</p>
 						<a href="#">Facebook</a>
 						<a href="#">Instagram</a>
 					</div>
@@ -27,12 +28,14 @@
 						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo">
 					</div>
 					<div class="col-xs-12 col-md-4">
-						<span>Tiendas</span>
+						<span>Tienda</span>
 						<p>
 							Calle Trajano 29 <br>
 							41002 Sevilla <br>
+							666 777 888 <br>
 							hello@aiatecompany.com <br>
-							666 777 888
+							10:00h - 14:00h y 17:30h - 21:00h
+							
 						</p>
 					</div>
 					<div class="col-xs-12 col-md-4">

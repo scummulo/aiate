@@ -1,11 +1,11 @@
 <?php
 /**
- * The main template file
+ * Template Name: Blog
  *
  * @package Aiate
  */
 
-get_header(); ?>
+ get_header(); ?>
 
  <div class="container-fluid">
     <section class="posts">

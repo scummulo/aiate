@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="wp-content/themes/aiate/dist/assets/js/custom.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/custom.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -23,7 +23,7 @@
 			<div class="topbar">
 				<div class="container-fluid">
 					<div class="logo-responsive">
-						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo">
+						<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo"></a>
 					</div>
 					<?php
 					wp_nav_menu( array(
@@ -45,13 +45,13 @@
 			<div class="navbar">
 				<div class="container-fluid">
 					<div class="logo">
-						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo.png" alt="aiate-logo">
+						<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo.png" alt="aiate-logo"></a>
 					</div>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'nav',
 						'container'      => 'ul',
-						'menu_class'=> ''
+						'menu_class'=> 'nav-web'
 					) );
 					?>
 					<?php

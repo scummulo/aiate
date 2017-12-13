@@ -2,12 +2,17 @@
 header {
   background-color: #fff;
   width: 100%;
-  right: 0;
-  left: 0;
   z-index: 2;
 
   @media (max-width: 768px) {
     position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    + main {
+      margin-top: 50px;
+    }
   }
 
   // Mobile nav
@@ -83,6 +88,12 @@ header {
           letter-spacing: 2px;
           text-transform: uppercase;
           padding-right: 30px;
+          color: #fff;
+          transition: .3s;
+
+          &:hover {
+            color: $color-secondary;
+          }
   
           &:last-child {
             padding-right: 0;
@@ -106,6 +117,8 @@ header {
   }
 
   .navbar {
+    border-bottom: 1px solid #f1f1f1;
+
     @media (max-width: 768px) {
       display: none;
     }
@@ -137,6 +150,27 @@ header {
           display: none;
         }
 
+        @media (min-width: 768px) {
+          &.nav-web {
+            li {
+              &:last-child {  
+                transition: none;
+                
+                a {
+                  border: 1px solid $color-primary;
+                  padding: 5px 15px;
+                  transition: .3s;
+    
+                  &:hover {
+                    background-color: $color-primary;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+
         li {
           display: inline-block;
           position: relative;
@@ -144,6 +178,11 @@ header {
           text-transform: uppercase;
           padding: 0 30px;
           color: $color-primary;
+          transition: .3s;
+
+          &:hover {
+            color: darken($color-primary, 20%);
+          }
   
           &:before {
             content: '';
@@ -154,20 +193,9 @@ header {
             width: 1px;
             background: $color-primary;
           }
-  
+
           &:last-child {
             padding-right: 0;
-
-            a {
-              border: 1px solid $color-primary;
-              padding: 5px 15px;
-              transition: .3s;
-
-              &:hover {
-                background-color: $color-primary;
-                color: #fff;
-              }
-            }
   
             &:before {
               display: none;

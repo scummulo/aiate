@@ -57,15 +57,21 @@
             if ( $loop->have_posts() ) {
               while ( $loop->have_posts() ) : $loop->the_post(); ?>              
                 <div class="product-card col-xs-12 col-sm-6 col-md-3">
-                  <a href="<?php echo get_permalink(); ?>">
-                  <?php woocommerce_template_loop_product_thumbnail(); ?>
+                <a href="<?php echo get_permalink(); ?>">
+                  <?php woocommerce_template_loop_product_thumbnail(); ?> 
+                </a>                 
                     <div class="product-info">                      
                       <?php woocommerce_template_single_meta(); ?>
-                      <span class="name"><?php the_title(); ?></span>
+                      <span class="name">
+                        <a href="<?php echo get_permalink(); ?>">
+                          <?php the_title(); ?> 
+                        </a>     
+                      </span>
                       <span class="price"><?php woocommerce_template_loop_price(); ?></span>
-                      <button type="button" class="primary" name="button"><?php woocommerce_template_loop_add_to_cart(); ?></button>
                     </div>
-                  </a>
+                
+                
+                 
                 </div>
               <?php endwhile;
             } else {
