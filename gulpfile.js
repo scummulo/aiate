@@ -19,12 +19,12 @@ var serverAlias = 'http://localhost:8888/';
 
 // Paths
 var IN = {
-  js: 'wp-content/themes/' + themeName + '/assets/js/',
+  js: 'wp-content/themes/' + themeName + '/dist/assets/js/',
   sass: 'wp-content/themes/' + themeName + '/dist/styles/*'
 }
 
 var OUT = {
-  js: 'wp-content/themes/' + themeName + '/assets/js/',
+  js: 'wp-content/themes/' + themeName + '/dist/assets/js/',
   css: 'wp-content/themes/' + themeName + '/'
 }
 
@@ -50,7 +50,7 @@ gulp.task('sass', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src(IN.js + 'custom.js')
+  return gulp.src(IN.js + '*')
     .pipe(customPlumber('Scripts'))
     .pipe(newer(OUT.js + 'custom.min.js'))
     .pipe(concat('custom.min.js'))

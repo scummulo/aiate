@@ -12,8 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="wp-content/themes/aiate/dist/assets/js/glide.min.js"></script>
-
+	<script src="wp-content/themes/aiate/dist/assets/js/custom.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -22,25 +21,29 @@
 	<header>
 		<nav>
 			<div class="topbar">
-				<div class="container">
+				<div class="container-fluid">
+					<div class="logo-responsive">
+						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo">
+					</div>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'topbar_left',
 						'container'      => 'ul',
-						'menu_class'=> ''
+						'menu_class'=> 'nav-web'
 					) );
 					?>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'topbar_right',
 						'container'      => 'ul',
-						'menu_class'=> ''
+						'menu_class'=> 'nav-web'
 					) );
 					?>
+					<button id="toggle-menu" class="menu">Menú</button>
 				</div>
 			</div>
 			<div class="navbar">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="logo">
 						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo.png" alt="aiate-logo">
 					</div>
@@ -51,11 +54,23 @@
 						'menu_class'=> ''
 					) );
 					?>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'topbar_left',
+						'container'      => 'ul',
+						'menu_class'=> 'nav-mobile'
+					) );
+					?>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'topbar_right',
+						'container'      => 'ul',
+						'menu_class'=> 'nav-mobile'
+					) );
+					?>
 				</div>
 			</div>
 		</nav>
 	</header>
-
-
 
 	<main>

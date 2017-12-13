@@ -1,0 +1,36 @@
+// Buttons
+button {
+    border: 0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: .3s all;
+
+    &.primary {
+        background-color: $color-primary;
+        color: #fff;
+
+        &:hover {
+            background-color: lighten($color-primary, 10%);
+        }
+    }
+
+    &.secondary {
+        background-color: $color-secondary;
+
+        &:hover {
+            background-color: lighten($color-secondary, 10%);
+        }
+    }
+
+    &.tertiary {
+        background-color: $color-tertiary;
+        color: #fff;
+
+        &:hover {
+            background-color: lighten($color-tertiary, 10%);
+        }
+    }
+}

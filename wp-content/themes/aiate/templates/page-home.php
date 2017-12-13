@@ -7,9 +7,6 @@
 
  get_header(); ?>
 
-
-
-
   <!-- Slider -->
   <div class="slider">
     <div id="Glide" class="glide">
@@ -45,10 +42,7 @@
   </div>
 
   <!-- Container -->
-  <div class="container">
-
-
-
+  <div class="container-fluid">
 
       <!-- Features products -->
       <section class="featured-products">
@@ -57,18 +51,19 @@
           <?php
             $args = array(
               'post_type' => 'product',
-              'posts_per_page' => 3
+              'posts_per_page' => 8
               );
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
               while ( $loop->have_posts() ) : $loop->the_post(); ?>              
-                <div class="product-card col-sm-12 col-md-4">
+                <div class="product-card col-xs-12 col-sm-6 col-md-3">
                   <a href="<?php echo get_permalink(); ?>">
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                      <span class="category"><?php the_category(); ?></span>
+                  <?php woocommerce_template_loop_product_thumbnail(); ?>
+                    <div class="product-info">                      
+                      <?php woocommerce_template_single_meta(); ?>
                       <span class="name"><?php the_title(); ?></span>
-                      <span class="price"><?php woocommerce_template_single_price(); ?></span>
+                      <span class="price"><?php woocommerce_template_loop_price(); ?></span>
+                      <button type="button" class="primary" name="button"><?php woocommerce_template_loop_add_to_cart(); ?></button>
                     </div>
                   </a>
                 </div>
@@ -85,26 +80,17 @@
       <section class="posts">
         <h2 class="section-title">Entradas</h2>
         <div class="row">
-          <?php $the_query = new WP_Query( 'posts_per_page=1' ); ?>
+          <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
           <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-            <div class="post-card col-sm-12 col-md-5">
+            <div class="post-card col-sm-12 col-md-4">
               <div class="post-image"></div>
               <div class="post-info">
                 <span class="category"><?php the_category(); ?></span>
                 <span class="name"><?php the_title(); ?></span>
                 <span class="excerpt"><?php the_excerpt(__('()')); ?></span>
-                <a href="<?php echo get_permalink(); ?>"><button type="button" name="button">Leer más</button></a>
+                <a href="<?php echo get_permalink(); ?>"><button type="button" class="primary" name="button">Leer más</button></a>
               </div>
             </div>
-            <div class="post-card col-sm-12 col-md-7">
-            <div class="post-image"></div>
-            <div class="post-info">
-            <span class="category"><?php the_category(); ?></span>
-            <span class="name"><?php the_title(); ?></span>
-            <span class="excerpt"><?php the_excerpt(__('()')); ?></span>
-            <a href="<?php echo get_permalink(); ?>"><button type="button" name="button">Leer más</button></a>
-            </div>
-          </div>
           <?php endwhile;
             wp_reset_postdata();
           ?>

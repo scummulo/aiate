@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="shop-info">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row align-center">
 					<div class="col-xs-12 col-md-4">
 						<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo">
