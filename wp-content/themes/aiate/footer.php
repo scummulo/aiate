@@ -15,8 +15,8 @@
 						<h4>Newsletter</h4>
 						<input type="text" placeholder="Escribe tu correo electrónico" name="" value="">
 						<p>Suscríbete a nuestro newsletter para estar al día de todas nuestras novedades y ofertas</p>
-						<a href="#">Facebook</a>
-						<a href="#">Instagram</a>
+						<a href="https://www.facebook.com/aiatecompany/">Facebook</a>
+						<a href="https://www.instagram.com/aiatecompany/">Instagram</a>
 					</div>
 				</div>
 			</div>

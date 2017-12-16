@@ -1,10 +1,9 @@
 // Header
 header {
-  background-color: #fff;
   width: 100%;
   z-index: 2;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     position: fixed;
     right: 0;
     left: 0;
@@ -16,15 +15,13 @@ header {
   }
 
   // Mobile nav
-  &.active {
-    height: 100%;
-
+  @media (max-width: 800px) {
     nav {
       height: 100%;
 
       .navbar {
-        display: block;
-        height: 100%;
+        height: calc(100vh - 50px);
+        background-color: #fff;
 
         .container-fluid {
           display: inline-block!important;
@@ -71,13 +68,13 @@ header {
         width: 140px;
         height: 24px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
           display: block;
         }
       }
 
       ul {
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
           display: none;
         }
 
@@ -109,7 +106,7 @@ header {
         font-size: 14px;
         letter-spacing: 1px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
           display: block;
         }
       }
@@ -119,7 +116,7 @@ header {
   .navbar {
     border-bottom: 1px solid #f1f1f1;
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       display: none;
     }
 
@@ -140,17 +137,16 @@ header {
         width: 200px;
         height: 36px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
           display: none;
         }
       }
   
       ul {
-        &.nav-mobile {
-          display: none;
-        }
-
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
+          &.nav-mobile {
+            display: none;
+          }
           &.nav-web {
             li {
               &:last-child {  

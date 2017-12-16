@@ -3,15 +3,17 @@
     .post-image {
       width: auto;
       height: 400px;
-      background: url('./dist/assets/img/post-image.jpg') center center no-repeat;
+      background-position: center center;
       background-size: cover;
-      -webkit-transition: .3s;
-      transition: .3s;
+      transition: .7s;
+
+      &:hover {
+        transform: scale(1.025);
+      }
     }
   
     .post-info {
       text-align: center;
-      margin: 0 0 30px 0;
       padding: 50px 20px;
   
       span {

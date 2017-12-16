@@ -9,10 +9,10 @@
 
   <!-- Slider -->
   <div class="slider">
-    <div id="Glide" class="glide">
+    <div id="post-slider" class="glide">
       <div class="glide__arrows">
-          <button class="glide__arrow prev" data-glide-dir="<">prev</button>
-          <button class="glide__arrow next" data-glide-dir=">">next</button>
+          <button class="glide__arrow prev" data-glide-dir="<"></button>
+          <button class="glide__arrow next" data-glide-dir=">"></button>
       </div>
       <div class="glide__wrapper">
           <ul class="glide__track">
@@ -20,12 +20,13 @@
               <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                 <li class="glide__slide">
                   <div class="slide">
-                    <a href="#" class="image">
-                      <div class="featured">
+                    <div class="image" style="background-image: url('<?php the_post_thumbnail_url()?>')"></div>
+                    <div class="featured">
+                        <a href="<?php echo get_permalink(); ?>">
                         <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt(__('()')); ?></p>
-                      </div>
-                    </a>
+                        <p><?php the_excerpt(__('()')); ?></p>                        
+                        </a>
+                      </div> 
                   </div>
                 </li>
               <?php endwhile;
@@ -34,11 +35,6 @@
           </ul>
       </div>
     </div>
-    <script>
-        $("#Glide").glide({
-            type: "carousel"
-        });
-    </script>
   </div>
 
   <!-- Container -->
@@ -51,7 +47,7 @@
           <?php
             $args = array(
               'post_type' => 'product',
-              'posts_per_page' => 8
+              'posts_per_page' => 4
               );
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
@@ -69,9 +65,6 @@
                       </span>
                       <span class="price"><?php woocommerce_template_loop_price(); ?></span>
                     </div>
-                
-                
-                 
                 </div>
               <?php endwhile;
             } else {
@@ -84,12 +77,12 @@
 
       <!-- Posts -->
       <section class="posts">
-        <h2 class="section-title">Entradas</h2>
+        <h2 class="section-title"><a class="back "href="<?php echo home_url('/' . 'blog') ?>">Blog</a></h2>
         <div class="row">
           <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
           <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
             <div class="post-card col-sm-12 col-md-4">
-              <div class="post-image"></div>
+              <div class="post-image" style="background-image: url('<?php the_post_thumbnail_url()?>')"></div>
               <div class="post-info">
                 <span class="category"><?php the_category(); ?></span>
                 <span class="name"><?php the_title(); ?></span>
@@ -125,6 +118,16 @@
           </div>
         </div>
       </section> -->
+
+      <!-- Instagram -->
+      <section class="posts">
+        <h2 class="section-title">Instagram</h2>
+        <div class="row">
+          <div class="col-xs-12">
+            <?php the_content(); ?>
+          </div>
+        </div>
+      </section>
   </div>
 
  <?php

@@ -7,27 +7,56 @@
 
 get_header(); ?>
 
+<?php 
+  $args = array (
+    'order' => ASC,
+    'orderby' => title,
+    'paged'=> $paged,
+    'posts_per_page' => -1,
+  );
+  $the_query = new WP_Query($args); 
+?>
+
  <div class="container-fluid">
     <section class="posts">
     <h2 class="section-title">Blog</h2>
     <div class="row">
-      <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
-      <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-        <div class="post-card col-sm-12 col-md-4">
-          <div class="post-image"></div>
-          <div class="post-info">
-            <span class="category"><?php the_category(); ?></span>
-            <span class="name"><?php the_title(); ?></span>
-            <span class="excerpt"><?php the_excerpt(__('()')); ?></span>
-            <a href="<?php echo get_permalink(); ?>"><button type="button" class="primary" name="button">Leer más</button></a>
-          </div>
-        </div>
-      <?php endwhile;
-        wp_reset_postdata();
-      ?>
+      <?php while ($the_query -> have_posts()) : $the_query -> the_post(); $counter++ ?>
+
+        <?php 
+          if ($counter == 4 || $counter == 5 ) {
+            echo
+            '
+            <div class="post-card col-xs-12 col-sm-6">
+            <div class="post-image" style="background-image: url('.get_the_post_thumbnail_url().')"></div>
+              <div class="post-info">
+                <span class="category">'.get_the_category().'</span>
+                <span class="name">'.get_the_title().'</span>
+                <span class="excerpt">'.get_the_excerpt(__('()')).'</span>
+                <a href="'.get_permalink().'"><button type="button" class="primary" name="button">Leer más</button></a>
+              </div>
+            </div>
+            ';
+          } else {
+            echo
+            '
+            <div class="post-card col-xs-12 col-sm-6 col-md-4">
+            <div class="post-image" style="background-image: url('.get_the_post_thumbnail_url().')"></div>
+              <div class="post-info">
+                <span class="category">'.get_the_category().'</span>
+                <span class="name">'.get_the_title().'</span>
+                <span class="excerpt">'.get_the_excerpt(__('()')).'</span>
+                <a href="'.get_permalink().'"><button type="button" class="primary" name="button">Leer más</button></a>
+              </div>
+            </div>
+            ';
+          }
+        ?>
+      <?php endwhile;?>
     </div>
   </section>
  </div>
+
 
  <?php
  get_footer();

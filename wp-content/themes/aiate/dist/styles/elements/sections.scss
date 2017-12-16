@@ -1,15 +1,25 @@
 // Sections
 section {
+  padding-top: 50px;
+
+  &.featured-products {
+    padding-top: 80px;
+  }
+
   .section-title {
     display: table;
-    border-bottom: 3px solid $color-secondary;
-    margin: 60px auto 80px;
+    margin: 0 auto 80px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $color-primary;
-    padding: 10px 30px;
+  }
+}
+
+body.blog {
+  section {
+    padding-top: 70px;
   }
 }

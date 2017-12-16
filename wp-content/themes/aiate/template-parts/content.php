@@ -24,6 +24,8 @@
 	</div>
 
 	<div class="post-content">
+		<img src="<?php the_post_thumbnail_url()?>" alt="post-thumbnail"> 
+				
 		<?php
 			the_content( sprintf(
 				wp_kses(

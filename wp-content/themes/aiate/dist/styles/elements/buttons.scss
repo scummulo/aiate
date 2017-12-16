@@ -1,10 +1,12 @@
 // Buttons
-button {
+button,
+#sbi_load a {
     border: 0;
     padding: 10px 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 100;
+    font-size: 0.7rem;
     cursor: pointer;
     transition: .3s all;
 
@@ -32,5 +34,18 @@ button {
         &:hover {
             background-color: lighten($color-tertiary, 10%);
         }
+    }
+}
+
+// Instagram feed button
+#sbi_load a {
+    margin: 40px 0 0 0!important;
+    border-radius: 0!important;
+    background-color: $color-primary!important;
+    color: #fff!important;
+    font-size: 0.7rem!important;
+
+    &:hover {
+        background-color: lighten($color-primary, 10%);
     }
 }

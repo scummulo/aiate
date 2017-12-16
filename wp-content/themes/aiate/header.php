@@ -11,7 +11,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/jquery.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/glide.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/mui.min.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/custom.min.js"></script>
 	<?php wp_head(); ?>
 </head>
