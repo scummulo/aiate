@@ -33,36 +33,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="product-images col-sm-6" data-columns="<?php echo esc_attr( $columns ); ?>">
-
-  <!-- Slider -->
-  <div class="slider">
-    <div id="product-detail-slider" class="glide">
-      <div class="glide__arrows">
-          <button class="glide__arrow prev" data-glide-dir="<"></button>
-          <button class="glide__arrow next" data-glide-dir=">"></button>
-      </div>
-      <div class="glide__wrapper">
-          <ul class="glide__track">
-				<?php
-				$attachment_ids = $product->get_gallery_attachment_ids();
-					foreach( $attachment_ids as $attachment_id )
-						echo
-						'
-						<li class="glide__slide">
-							<div class="slide">
-								<div class="image" style="background-image: url('.wp_get_attachment_url( $attachment_id ).')"></div>
-						</div>
-						</li>
-						'
-				?>
-          </ul>
-      </div>
-    </div>
-  </div>
-
-
-	<!-- <figure class="woocommerce-product-gallery__wrapper">
+<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+	<figure class="woocommerce-product-gallery__wrapper">
 		<?php
 		$attributes = array(
 			'title'                   => get_post_field( 'post_title', $post_thumbnail_id ),
@@ -87,7 +59,5 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
-	</figure> -->
-
-	
+	</figure>
 </div>

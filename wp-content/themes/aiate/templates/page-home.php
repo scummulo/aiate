@@ -52,19 +52,16 @@
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
               while ( $loop->have_posts() ) : $loop->the_post(); ?>              
-                <div class="product-card col-xs-12 col-sm-6 col-md-3">
-                <a href="<?php echo get_permalink(); ?>">
-                  <?php woocommerce_template_loop_product_thumbnail(); ?> 
-                </a>                 
-                    <div class="product-info">                      
-                      <?php woocommerce_template_single_meta(); ?>
-                      <span class="name">
-                        <a href="<?php echo get_permalink(); ?>">
-                          <?php the_title(); ?> 
-                        </a>     
-                      </span>
-                      <span class="price"><?php woocommerce_template_loop_price(); ?></span>
-                    </div>
+                <div class="product-card col-xs-6 col-sm-6 col-md-3">
+                  <a class="product-link" href="<?php echo get_permalink(); ?>"></a>
+                  <?php woocommerce_template_loop_product_thumbnail(); ?>             
+                  <div class="product-info">                      
+                    <?php woocommerce_template_single_meta(); ?>
+                    <span class="name">
+                    <?php the_title(); ?> 
+                    </span>
+                    <?php woocommerce_template_loop_price(); ?>
+                  </div>
                 </div>
               <?php endwhile;
             } else {
