@@ -38,14 +38,13 @@
       display: block;
 
       &.name {
+        min-height: 100px;
+        display: flex;
+        align-items: center;
         font-size: 22px;
         color: $color-primary;
         line-height: 120%;
         padding: 10px 0;
-
-        @media (min-width: 768px) {
-          min-height: 80px;
-        }
       }
 
       &.price {

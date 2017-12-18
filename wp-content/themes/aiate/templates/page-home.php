@@ -79,12 +79,13 @@
           <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
           <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
             <div class="post-card col-sm-12 col-md-4">
+             <a class="post-link" href="<?php echo get_permalink(); ?>"></a>
               <div class="post-image" style="background-image: url('<?php the_post_thumbnail_url()?>')"></div>
               <div class="post-info">
                 <span class="category"><?php the_category(); ?></span>
                 <span class="name"><?php the_title(); ?></span>
                 <span class="excerpt"><?php the_excerpt(__('()')); ?></span>
-                <a href="<?php echo get_permalink(); ?>"><button type="button" class="primary" name="button">Leer más</button></a>
+                <button type="button" class="primary" name="button">Leer más</button>
               </div>
             </div>
           <?php endwhile;

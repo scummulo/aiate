@@ -1,6 +1,7 @@
 // Buttons
 button,
-#sbi_load a {
+#sbi_load a,
+#add_payment_method .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
     border: 0;
     padding: 10px 30px;
     text-transform: uppercase;

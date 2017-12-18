@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="product-info col-sm-6">
+	<div class="product-info col-md-6">
 		
 		<?php
 			/**

@@ -33,7 +33,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="product-images col-sm-6" data-columns="<?php echo esc_attr( $columns ); ?>">
+<div class="product-images col-md-6" data-columns="<?php echo esc_attr( $columns ); ?>">
 
   <!-- Slider -->
   <div class="slider">

@@ -19,7 +19,7 @@ get_header(); ?>
 
  <div class="container-fluid">
     <section class="posts">
-    <h2 class="section-title">Blog</h2>
+    <h1 class="section-title">Blog</h1>
     <div class="row">
       <?php while ($the_query -> have_posts()) : $the_query -> the_post(); $counter++ ?>
 
@@ -28,12 +28,13 @@ get_header(); ?>
             echo
             '
             <div class="post-card col-xs-12 col-sm-6">
+            <a class="post-link" href="'.get_permalink().'"></a>
             <div class="post-image" style="background-image: url('.get_the_post_thumbnail_url().')"></div>
               <div class="post-info">
                 <span class="category">'.get_the_category().'</span>
                 <span class="name">'.get_the_title().'</span>
                 <span class="excerpt">'.get_the_excerpt(__('()')).'</span>
-                <a href="'.get_permalink().'"><button type="button" class="primary" name="button">Leer más</button></a>
+                <button type="button" class="primary" name="button">Leer más</button>
               </div>
             </div>
             ';
@@ -41,12 +42,13 @@ get_header(); ?>
             echo
             '
             <div class="post-card col-xs-12 col-sm-6 col-md-4">
+            <a class="post-link" href="'.get_permalink().'"></a>
             <div class="post-image" style="background-image: url('.get_the_post_thumbnail_url().')"></div>
               <div class="post-info">
                 <span class="category">'.get_the_category().'</span>
                 <span class="name">'.get_the_title().'</span>
                 <span class="excerpt">'.get_the_excerpt(__('()')).'</span>
-                <a href="'.get_permalink().'"><button type="button" class="primary" name="button">Leer más</button></a>
+                <button type="button" class="primary" name="button">Leer más</button>
               </div>
             </div>
             ';

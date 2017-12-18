@@ -1,0 +1,63 @@
+// Cesta
+.cart {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .woocommerce-message {
+        &.success {
+            background: 0;
+            border: 0;
+            padding: 0;
+            margin: 0;
+    
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .cart-collaterals {
+        .cart_totals {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    input.update {
+        border: 0;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 100;
+        font-size: 0.7rem;
+        cursor: pointer;
+        transition: .3s all;
+        background-color: $color-secondary;
+        color: #fff;
+
+        &:disabled {
+            padding: 10px 30px!important;
+            color: #fff!important;
+        }
+
+        &:hover {
+            background-color: lighten($color-secondary, 10%);
+            color: #fff;
+        }
+    }
+
+    .wc-proceed-to-checkout {
+        a {
+            transition: .3s all;
+            background-color: $color-primary!important;
+
+            &:hover {
+                background-color: lighten($color-primary, 10%)!important;
+            } 
+        }
+    }
+
+    .coupon {
+        display: none;
+    }
+}

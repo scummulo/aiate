@@ -42,7 +42,7 @@ body.single-product {
             padding: 30px;
             overflow-y: auto;
 
-            @media (max-width: 800px) {
+            @media (max-width: 768px) {
                 height: auto;
                 padding: 30px 15px;
             }
@@ -78,6 +78,10 @@ body.single-product {
 
             .quantity {
                 padding: 0;
+
+                input {
+                    padding: 8px 0;
+                }
             }
     
             p {

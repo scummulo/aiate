@@ -26,5 +26,10 @@ $(document).ready(function() {
         type: 'carousel'
     });
 
+    // Messages
+    $('#closeMessage').click(function() {
+        $('.message').fadeOut();
+    })
+
 });
 
