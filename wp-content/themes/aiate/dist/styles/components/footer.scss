@@ -37,6 +37,11 @@ footer {
 
     a {
       padding: 0 15px;
+      transition: .2s;
+
+      &:hover {
+        color: #ccc;
+      }
     }
   }
 
@@ -75,6 +80,11 @@ footer {
       display: block;
       &:not(:first-child) {
         font-size: 14px;
+        transition: .2s;
+
+        &:hover {
+          color: #ccc;
+        }
       }
 
       @media (max-width: 768px) {

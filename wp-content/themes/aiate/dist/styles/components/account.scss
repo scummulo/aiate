@@ -87,6 +87,11 @@ nav.woocommerce-MyAccount-navigation {
             font-size: 0.7rem;
         }
     }
+
+    .woocommerce-form-row {
+        max-width: initial!important;
+        margin: 0!important;
+    }
 }
 
 .woocommerce-form-login {

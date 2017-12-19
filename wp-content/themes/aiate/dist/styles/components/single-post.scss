@@ -1,6 +1,5 @@
 // Single post
-div.single-post,
-article.page {
+div.single-post {
     .post-title {
         max-width: 700px;
         margin: 0 auto;
@@ -12,8 +11,9 @@ article.page {
         }
 
         h1.title {
-            font-size: 3rem;
-            line-height: 3.2rem;
+            font-size: 2.5rem;
+            line-height: 2.7rem;
+            font-weight: 600;
             margin: 0;
             color: $color-primary;
             word-break: break-word;
@@ -26,6 +26,8 @@ article.page {
     }
 
     .post-content {
+        font-weight: 100;
+        
         img {
             display: block;
             margin: 30px auto;

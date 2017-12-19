@@ -70,6 +70,13 @@
 						'menu_class'=> 'nav-mobile'
 					) );
 					?>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'shop',
+						'container'      => 'ul',
+						'menu_class'=> 'shop'
+					) );
+					?>
 				</div>
 			</div>
 		</nav>

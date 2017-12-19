@@ -2,8 +2,11 @@ $(document).ready(function() {
 
     // Nav
     $('#toggle-menu').click(function(){
-        // $('header').toggleClass('active')
-        $('.navbar').fadeToggle()
+        $('.navbar').fadeToggle();
+    });
+
+    $('.navbar ul li:last-child').click(function() {
+        $('ul.shop').fadeToggle();
     });
 
     // Sliders

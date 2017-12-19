@@ -24,7 +24,7 @@
                     <div class="featured">
                         <a href="<?php echo get_permalink(); ?>">
                         <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt(__('()')); ?></p>                        
+                        <!-- <p><?php the_excerpt(__('()')); ?></p>                         -->
                         </a>
                       </div> 
                   </div>
