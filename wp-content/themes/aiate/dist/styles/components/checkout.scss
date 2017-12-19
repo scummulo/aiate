@@ -1,0 +1,90 @@
+// Checkout
+form.woocommerce-checkout {
+    .row {
+        h3 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+    
+        .form-row {
+            margin-bottom: 10px!important;
+        }
+    
+        label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+    
+        input {
+            color: #333;
+            padding: 10px;
+    
+            &[type="text"]{
+                border: 1px solid rgba(0,0,0,.1);
+            }
+        }
+    
+        textarea {
+            padding: 10px;
+            border: 1px solid rgba(0,0,0,.1);
+        }
+    }
+}
+
+.woocommerce-billing-fields {
+    .form-row .select2-container {
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+
+        .select2-selection {
+            border-radius: 0;
+            border: 1px solid rgba(0,0,0,.1);
+            height: 40px;
+
+            > span {
+                line-height: 40px;
+            }
+
+            .select2-selection__arrow {
+                height: 40px;
+            }
+        }
+    }
+
+    .required {
+        font-weight: 100!important;
+    }
+}
+
+.woocommerce-checkout-payment {
+    h3 {
+        margin: 0;
+        padding: 15px;
+        border-bottom: 0!important;
+    }
+
+    img {
+        width: 60px;
+    }
+
+    .payment_box {
+        padding-top: 1px!important;
+        font-size: 0.8rem!important;
+        line-height: 1rem!important;
+    }
+
+    button.buy {
+        padding: 0;
+        display: block;
+        width: 100%;
+
+        input {
+            float: none!important;
+            background: 0!important;
+            padding: 10px 30px;
+            text-transform: uppercase;
+        }
+    }
+}

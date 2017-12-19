@@ -85,7 +85,6 @@
                 <span class="category"><?php the_category(); ?></span>
                 <span class="name"><?php the_title(); ?></span>
                 <span class="excerpt"><?php the_excerpt(__('()')); ?></span>
-                <button type="button" class="primary" name="button">Leer más</button>
               </div>
             </div>
           <?php endwhile;

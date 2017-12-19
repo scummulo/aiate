@@ -36,9 +36,9 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 	<?php do_action( 'woocommerce_after_available_downloads' ); ?>
 
 <?php else : ?>
-	<div class="message">
+	<div class="downloads">
 		<div class="woocommerce-Message alert woocommerce-Message--info woocommerce-info">
-			<button type="button" class="primary">
+			<button type="button save-account" class="primary">
 				<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 					<?php esc_html_e( 'Go shop', 'woocommerce' ) ?>
 				</a>

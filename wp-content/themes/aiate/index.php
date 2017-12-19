@@ -24,6 +24,9 @@ get_header(); ?>
       <?php while ($the_query -> have_posts()) : $the_query -> the_post(); $counter++ ?>
 
         <?php 
+        $category_object = get_the_category($post_id);
+        $category_name = $category_object[0]->name;
+
           if ($counter == 4 || $counter == 5 ) {
             echo
             '
@@ -31,10 +34,9 @@ get_header(); ?>
             <a class="post-link" href="'.get_permalink().'"></a>
             <div class="post-image" style="background-image: url('.get_the_post_thumbnail_url().')"></div>
               <div class="post-info">
-                <span class="category">'.get_the_category().'</span>
+                <span class="category">'.$category_name.'</span>
                 <span class="name">'.get_the_title().'</span>
-                <span class="excerpt">'.get_the_excerpt(__('()')).'</span>
-                <button type="button" class="primary" name="button">Leer más</button>
+                <span class="excerpt">'.get_the_excerpt().'</span>
               </div>
             </div>
             ';
@@ -45,10 +47,9 @@ get_header(); ?>
             <a class="post-link" href="'.get_permalink().'"></a>
             <div class="post-image" style="background-image: url('.get_the_post_thumbnail_url().')"></div>
               <div class="post-info">
-                <span class="category">'.get_the_category().'</span>
+                <span class="category">'.$category_name.'</span>
                 <span class="name">'.get_the_title().'</span>
-                <span class="excerpt">'.get_the_excerpt(__('()')).'</span>
-                <button type="button" class="primary" name="button">Leer más</button>
+                <span class="excerpt">'.get_the_excerpt().'</span>
               </div>
             </div>
             ';

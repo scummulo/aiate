@@ -10,10 +10,15 @@
 ?>
 <div class="container-fluid">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="page-title">
+		<div class="post-title">
 			<?php the_title( '<h1 class="section-title">', '</h1>' ); ?>
 		</div>
-		<div class="page-content">
+
+		<div class="post-content">
+			<?php if ( has_post_thumbnail() ) : ?>		
+				<img src="<?php the_post_thumbnail_url()?>" alt="post-thumbnail">
+			<?php endif; ?>
+			
 			<?php
 				the_content();
 

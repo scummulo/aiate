@@ -1,0 +1,116 @@
+// Cesta
+div.woocommerce {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+.cart {
+    .woocommerce-message {
+        &.success {
+            background: 0;
+            border: 0;
+            padding: 0;
+            margin: 0;
+    
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .cart-collaterals {
+        .cart_totals {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    input.update {
+        border: 0;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 100;
+        font-size: 0.7rem;
+        cursor: pointer;
+        transition: .3s all;
+        background-color: $color-secondary;
+        color: #fff;
+
+        &:disabled {
+            padding: 5px 20px!important;
+            color: #fff!important;
+        }
+
+        &:hover {
+            background-color: lighten($color-secondary, 10%);
+            color: #fff;
+        }
+    }
+
+    .wc-proceed-to-checkout {
+        a {
+            transition: .3s all;
+            background-color: $color-primary!important;
+
+            &:hover {
+                background-color: lighten($color-primary, 10%)!important;
+            } 
+        }
+    }
+
+    .coupon {
+        display: none;
+    }
+
+    .product-remove {     
+        .remove {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            font-size: 0;
+
+            &:hover {
+                background: 0;
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 1px;
+                top: 10px;
+                left: 0px;
+                width: 20px;
+                background-color: #333;
+                transform: rotate(45deg);
+            }
+        
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 1px;
+                top: 10px;
+                left: 0px;
+                width: 20px;
+                background-color: #333;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .checkout-button {
+        padding: 15px 30px!important;
+        font-weight: 500!important;
+    }
+}
+
+.cart-empty {
+    text-align: center;
+}
+
+.return-to-shop {
+    display: table;
+    margin: 0 auto;
+}

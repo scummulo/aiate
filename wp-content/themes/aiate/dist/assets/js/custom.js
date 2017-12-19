@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     // Messages
     $('#closeMessage').click(function() {
-        $('.message').fadeOut();
+        $('.woocommerce-message').fadeOut();
     })
 
 });
