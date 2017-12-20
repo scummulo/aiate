@@ -1,7 +1,7 @@
 // Header
 header {
   width: 100%;
-  z-index: 2;
+  z-index: 5;
 
   @media (max-width: 800px) {
     position: fixed;
@@ -22,6 +22,7 @@ header {
       .navbar {
         height: calc(100vh - 50px);
         background-color: #fff;
+        overflow-y: auto;
 
         .container-fluid {
           display: inline-block!important;
@@ -149,20 +150,87 @@ header {
           }
           &.nav-web {
             li {
-              &:last-child {  
+              &:last-child {
+                position: inherit;
                 transition: none;
                 
                 a {
                   border: 1px solid $color-primary;
                   padding: 5px 15px;
                   transition: .3s;
-    
+
+                  &.active {
+                    background-color: $color-primary;
+                    color: #fff;
+                  }
+
                   &:hover {
                     background-color: $color-primary;
                     color: #fff;
                   }
                 }
+
+                > .sub-menu {
+                  display: none;
+                  position: absolute;
+                  top: 131px;
+                  left: 0;
+                  z-index: 4;
+                  width: 100%;
+                  padding: 30px 0 0;
+                  background: #f1f1f1;
+                  
+                  > li {
+                    padding: 0;
+
+                    a {
+                      color: #333!important;
+                      font-size: 0.8rem;
+                      background: 0!important;
+                      padding: 0 60px!important;
+                      font-weight: 600!important;
+                      border: 0;
+
+                      &:hover {
+                        background: 0;
+                      }
+                    }
+            
+                    &:before {
+                      display: none;
+                    }
+            
+                    > ul {
+                      position: static;
+                      padding: 0;
+                      margin: 10px 0 40px 0;
+            
+                      > li {
+                        display: block;
+                        padding: 0;
+                        color: #333;
+                        text-transform: none;
+                        
+                        a {
+                          font-weight: 100!important;
+
+                        }
+                      }
+                    }
+                  }
+                }
               }
+            }
+          }
+        }
+
+        &.sub-menu {
+          font-size: 0.9rem;
+
+          @media (max-width: 800px) {
+            li {
+              margin: 10px 0;
+              text-transform: none;
             }
           }
         }
@@ -199,86 +267,6 @@ header {
             }
           }
         }
-      }
-    }
-
-    .shop {
-      display: none;
-      position: absolute;
-      top: 131px;
-      left: 0;
-      z-index: 4;
-      width: 100%;
-      // height: calc(100vh - 131px);
-      padding: 30px 0;
-      background: rgba(51, 51, 51, 0.9);
-
-      
-      > li {
-        color: #fff!important;
-        font-size: 0.8rem;
-        padding: 0 60px!important;
-        font-weight: 600!important;
-
-        &:before {
-          display: none;
-        }
-
-        ul {
-          margin: 10px 0 30px 0;
-
-          li {
-            display: block;
-            padding: 0;
-            color: #fff;
-            text-transform: none;
-            font-weight: 100;
-
-            &:hover {
-              color: #ccc;
-            }
-          }
-        }
-      }
-    }
-
-    #closeShop {
-      position: absolute;
-      z-index: 6;
-      top: 20px;
-      left: 18px;
-      background: 0;
-      padding: 0;
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-
-      &:hover {
-        outline: 0;
-      }
-
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1px;
-        top: 10px;
-        left: 0px;
-        width: 20px;
-        background-color: #fff;
-        transform: rotate(45deg);
-      }
-  
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1px;
-        top: 10px;
-        left: 0px;
-        width: 20px;
-        background-color: #fff;
-        transform: rotate(-45deg);
       }
     }
   }

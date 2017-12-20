@@ -1,6 +1,7 @@
 // Product
 // List
-.post-type-archive-product {
+.post-type-archive-product main,
+.tax-product_cat main {
     .container-fluid {
         position: relative;
 
@@ -17,10 +18,12 @@
         }
 
         .woocommerce-ordering {
+            position: relative;
             float: none;
             max-width: 300px;
             margin: 0 auto 50px;
             text-align: center;
+            z-index: 2;
         }
     }
 }

@@ -5,9 +5,19 @@ $(document).ready(function() {
         $('.navbar').fadeToggle();
     });
 
-    $('.navbar ul li:last-child').click(function() {
-        $('ul.shop').fadeToggle();
-    });
+        // Shop
+        var $win = $(window);
+        var $shop = $('.navbar ul li:last-child');
+        
+        $win.on("click.Bst", function(event){		
+            if ($shop.has(event.target).length == 0 && !$shop.is(event.target)){
+                $('.navbar ul li:last-child > .sub-menu').fadeOut();
+                $('.navbar ul li:last-child a').removeClass('active');
+            } else {
+                $('.navbar ul li:last-child > .sub-menu').fadeIn();
+                $('.navbar ul li:last-child a').addClass('active');
+            }
+        });
 
     // Sliders
     $('#post-slider').glide({
