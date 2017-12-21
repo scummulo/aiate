@@ -83,7 +83,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<?php
 
 	wp_enqueue_style( 'login' );
-	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/dist/styles/components/style-login.css' );
+	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
 
 	/*
 	 * Remove all stored post data on logging out.

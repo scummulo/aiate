@@ -4,7 +4,46 @@ div.woocommerce {
     margin: 0 auto;
     padding-bottom: 60px;
 }
-.cart {
+
+#cart {
+    display: none;
+    max-width: 400px;
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    z-index: 10;
+    color: #333;
+    font-size: 0.7rem;
+
+    @media (max-width: 800px) {
+        left: 15px;
+        max-width: initial;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #f1f1f1;
+        right: 32px;
+        top: -7px;
+
+        @media (max-width: 800px) {
+            right: 106px;
+        }
+    }
+
+    h2 {
+        padding: 20px 20px 0 20px;
+        margin-top: 0;
+    }
+
     .woocommerce-message {
         &.success {
             background: 0;
@@ -22,33 +61,31 @@ div.woocommerce {
         .cart_totals {
             float: none;
             width: 100%;
+
+            h2 {
+                padding-top: 0;
+            }
         }
     }
 
     input.update {
         border: 0;
-        padding: 5px 20px;
+        padding: 0;
+        background: 0;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-weight: 100;
-        font-size: 0.7rem;
+        font-weight: 600;
+        font-size: 0.5rem;
         cursor: pointer;
-        transition: .3s all;
-        background-color: $color-secondary;
-        color: #fff;
 
         &:disabled {
-            padding: 5px 20px!important;
-            color: #fff!important;
-        }
-
-        &:hover {
-            background-color: lighten($color-secondary, 10%);
-            color: #fff;
         }
     }
 
     .wc-proceed-to-checkout {
+        text-align: center;
+        padding: 0 20px 20px 20px;
+
         a {
             transition: .3s all;
             background-color: $color-primary!important;
@@ -81,7 +118,7 @@ div.woocommerce {
                 height: 1px;
                 top: 10px;
                 left: 0px;
-                width: 20px;
+                width: 15px;
                 background-color: #333;
                 transform: rotate(45deg);
             }
@@ -93,7 +130,7 @@ div.woocommerce {
                 height: 1px;
                 top: 10px;
                 left: 0px;
-                width: 20px;
+                width: 15px;
                 background-color: #333;
                 transform: rotate(-45deg);
             }

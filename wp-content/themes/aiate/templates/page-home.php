@@ -16,7 +16,13 @@
       </div>
       <div class="glide__wrapper">
           <ul class="glide__track">
-              <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+              <?php 
+              $args = array(
+                'category_name' => 'slider',
+                'posts_per_page' => -1
+              );
+              $the_query = new WP_Query($args);
+              ?>
               <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                 <li class="glide__slide">
                   <div class="slide">
@@ -24,7 +30,6 @@
                     <div class="featured">
                         <a href="<?php echo get_permalink(); ?>">
                         <h1><?php the_title(); ?></h1>
-                        <!-- <p><?php the_excerpt(__('()')); ?></p>                         -->
                         </a>
                       </div> 
                   </div>

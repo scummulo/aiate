@@ -12,7 +12,7 @@ get_header(); ?>
     'order' => ASC,
     'orderby' => title,
     'paged'=> $paged,
-    'posts_per_page' => -1,
+    'posts_per_page' => -1
   );
   $the_query = new WP_Query($args); 
 ?>

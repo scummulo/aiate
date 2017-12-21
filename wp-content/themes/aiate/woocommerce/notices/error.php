@@ -27,7 +27,6 @@ if ( ! $messages ) {
 ?>
 <ul class="woocommerce-message error">
 	<div class="message">
-		<button id="closeMessage"></button>
 		<?php foreach ( $messages as $message ) : ?>
 			<li><?php echo wp_kses_post( $message ); ?></li>
 		<?php endforeach; ?>

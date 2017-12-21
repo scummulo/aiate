@@ -157,7 +157,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 			?>
 		</div>
 	</div>
-
 </div>
 
 

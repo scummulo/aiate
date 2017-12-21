@@ -6,10 +6,10 @@ $(document).ready(function() {
     });
 
         // Shop
-        var $win = $(window);
+        var $winshop = $(window);
         var $shop = $('.navbar ul li:last-child');
         
-        $win.on("click.Bst", function(event){		
+        $winshop.on("click.Bst", function(event){		
             if ($shop.has(event.target).length == 0 && !$shop.is(event.target)){
                 $('.navbar ul li:last-child > .sub-menu').fadeOut();
                 $('.navbar ul li:last-child a').removeClass('active');
@@ -18,6 +18,46 @@ $(document).ready(function() {
                 $('.navbar ul li:last-child a').addClass('active');
             }
         });
+
+        // Cart
+        var $wincart = $(window);
+        var $cart = $('#toggle-cart');
+        
+        $wincart.on("click.Bst", function(event){		
+            if ($cart.has(event.target).length == 0 && !$cart.is(event.target)){
+                $('#cart').fadeOut();
+            } else {
+                $('#cart').fadeIn();
+            }
+        });
+        
+
+        // Search
+        $('a[href*="search"]').click(function(event) {
+            event.preventDefault();	
+            $('#search').fadeIn();
+        })
+
+        $("html").click(function(event){
+            var otarget = $(event.target);
+            if (!otarget.parents('#search').length && otarget.attr('id')!="#search" && !otarget.parents('a[href*="search"]').length) {
+                $('#search').hide();
+            }
+        });
+
+
+
+        // var $winsearch = $(window);
+        // var $search = $('a[href*="search"]');
+        
+        // $winsearch.on("click.Bst", function(event){
+        //     event.preventDefault();	
+        //     if ($search.has(event.target).length == 0 && !$search.is(event.target)){
+        //         $('#search').fadeOut();
+        //     } else {
+        //         $('#search').fadeIn();
+        //     }
+        // });
 
     // Sliders
     $('#post-slider').glide({
@@ -39,10 +79,11 @@ $(document).ready(function() {
         type: 'carousel'
     });
 
-    // Messages
-    $('#closeMessage').click(function() {
-        $('.woocommerce-message').fadeOut();
-    })
+    if($('.woocommerce-message')) {
+        setTimeout(function(){
+            $('.woocommerce-message').fadeOut();
+        }, 2000);
+    }
 
 });
 

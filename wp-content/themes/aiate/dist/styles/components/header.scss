@@ -75,6 +75,8 @@ header {
       }
 
       ul {
+        margin-right: 80px;
+
         @media (max-width: 800px) {
           display: none;
         }
@@ -109,6 +111,50 @@ header {
 
         @media (max-width: 800px) {
           display: block;
+        }
+      }
+    }
+
+    .cart-menu {
+      position: absolute;
+      font-size: 13px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      transition: .3s;
+      right: 30px;
+      top: 17px;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-secondary;
+
+        span {
+          color: #fff;
+        }
+      }
+
+      @media (max-width: 800px) {
+        right: 105px;
+      }
+
+      .circle {
+        position: absolute;
+        right: -13px;
+        top: -7px;
+        width: 15px;
+        height: 15px;
+        background-color: $color-secondary;
+        border-radius: 50%;
+ 
+        span {
+          font-size: 0.6rem;
+          letter-spacing: 0;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
         }
       }
     }
@@ -157,6 +203,7 @@ header {
                 a {
                   border: 1px solid $color-primary;
                   padding: 5px 15px;
+                  cursor: pointer;
                   transition: .3s;
 
                   &.active {
@@ -210,10 +257,13 @@ header {
                         padding: 0;
                         color: #333;
                         text-transform: none;
+
+                        &:before {
+                          display: none;
+                        }
                         
                         a {
                           font-weight: 100!important;
-
                         }
                       }
                     }
