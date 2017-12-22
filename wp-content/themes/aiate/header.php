@@ -53,7 +53,6 @@
 						<?php }	?>
 					
 					</a>
-
 					<?php } ?>
 
 					<!-- Search -->
@@ -65,7 +64,6 @@
 							</div>
 						</form>
 					</div>
-
 					
 					<!-- Cart  -->
 					<div id="cart" class="woocommerce cart">
@@ -202,7 +200,8 @@
 							</div>
 						</div>
 					</div>
-					<!-- End Cart -->				
+					<!-- End Cart -->	
+								
 					<button id="toggle-menu" class="menu">Menú</button>
 				</div>
 			</div>
