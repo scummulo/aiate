@@ -1,4 +1,42 @@
 // Search
-#search {
-    display: none;
-}
+    // Menu
+    #search {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        left: 0;
+        width: 100%;
+        top: 131px;
+        z-index: 5;
+        padding: 0 60px;
+    }
+
+    // List
+    div.search-results {
+        padding-top: 70px;
+
+        .search-title {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            display: table;
+            margin: 0 auto 80px;
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: 2.7rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: $color-primary;
+    
+            @media (max-width: 768px) {
+                padding: 30px 0 10px;
+                font-size: 2rem;
+                line-height: 2.2rem;
+            }
+        }
+
+        .search-none {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+    }

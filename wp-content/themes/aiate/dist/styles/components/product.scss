@@ -44,6 +44,7 @@ body.single-product {
             height: calc(100vh - 131px);
             padding: 30px;
             overflow-y: auto;
+            border-bottom: 30px solid #fff;
 
             @media (max-width: 768px) {
                 height: auto;

@@ -50,18 +50,21 @@
 							<div class="circle">
 								<span class="cart-menu-items"><?php echo esc_html( $count ); ?></span>
 							</div>
-						<?php }	?></a>
+						<?php }	?>
+					
+					</a>
+
 					<?php } ?>
 
 					<!-- Search -->
-					<!-- <div id="search">
+					<div id="search">
 						<form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<div class="mui-textfield">
 								<label class="screen-reader-text" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php _e( 'Search for:', 'woocommerce' ); ?></label>
 								<input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 							</div>
 						</form>
-					</div> -->
+					</div>
 
 					
 					<!-- Cart  -->

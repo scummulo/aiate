@@ -31,33 +31,11 @@ $(document).ready(function() {
             }
         });
         
-
         // Search
-        $('a[href*="search"]').click(function(event) {
+        $('a[href*="search"]').click(function() {
             event.preventDefault();	
-            $('#search').fadeIn();
+            $('#search').fadeToggle();
         })
-
-        $("html").click(function(event){
-            var otarget = $(event.target);
-            if (!otarget.parents('#search').length && otarget.attr('id')!="#search" && !otarget.parents('a[href*="search"]').length) {
-                $('#search').hide();
-            }
-        });
-
-
-
-        // var $winsearch = $(window);
-        // var $search = $('a[href*="search"]');
-        
-        // $winsearch.on("click.Bst", function(event){
-        //     event.preventDefault();	
-        //     if ($search.has(event.target).length == 0 && !$search.is(event.target)){
-        //         $('#search').fadeOut();
-        //     } else {
-        //         $('#search').fadeIn();
-        //     }
-        // });
 
     // Sliders
     $('#post-slider').glide({

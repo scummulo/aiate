@@ -3,6 +3,10 @@
   #product-detail-slider {
     .slide {
       height: 82vh;
+
+      @media(max-width: 768px) {
+        height: 50vh;
+      }
     }
 
     .glide__arrows {
