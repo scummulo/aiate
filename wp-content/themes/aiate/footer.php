@@ -53,7 +53,6 @@
 
 <?php wp_footer(); ?>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZTZdzvaX5GMGOeYQNpgcq5H72Lvc8KQk&callback=initMap"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/glide.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/mui.min.js"></script>

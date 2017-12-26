@@ -17,6 +17,7 @@
             </div>
         </div>
     </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZTZdzvaX5GMGOeYQNpgcq5H72Lvc8KQk&callback=initMap"></script>
     <div id="map"></div>
 
  <?php
