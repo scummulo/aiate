@@ -1,34 +1,50 @@
 // Account
 nav.woocommerce-MyAccount-navigation {
-    width: 250px!important;
-
-    @media (max-width: 768px) {
-        width: 100%!important;
-    }
+    width: 100%!important;
+    float: none!important;
+    text-align: center;
 
     ul {
+        margin-bottom: 60px;
+
         @media (max-width: 768px) {
             text-align: center;
             margin: 0 0 60px;
         }
 
         li {
+            display: inline-block;
+            margin-right: 30px;
             margin-bottom: 5px;
+
+            @media (max-width: 768px) {
+                display: block;
+                margin-right: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
+    }
+
+    .woocommerce-MyAccount-navigation-link--downloads {
+        display: none;
     }
 }
 
 .woocommerce-MyAccount-content {
-    width: calc(100% - 250px)!important;
-
-    @media (max-width: 768px) {
-        width: 100%!important;
-    }
+    width: 100%!important;
+    float: none!important;
+    max-width: 700px;
+    margin: 0 auto;
 
     p {
-       &:first-child {
-           margin-top: 0;
-       } 
+        max-width: initial!important;
+
+        &:first-child {
+            margin-top: 0!important;
+        } 
     }
 
     label {
@@ -76,21 +92,89 @@ nav.woocommerce-MyAccount-navigation {
         }
     }
 
-    .woocommerce-Address-title {
-        position: relative;
+    .woocommerce-Address {
+        .woocommerce-Address-title {
+            position: relative;
+    
+            a {
+                position: absolute;
+                top: 0px;
+                left: 0;
+                color: $color-secondary;
+                font-weight: 600;
+                font-size: 0.7rem;
+            }
+        }
 
-        a {
-            position: absolute;
-            top: 0px;
-            left: 0;
-            color: $color-primary;
+        address {
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+    }
+
+    .woocommerce-address-fields {
+        p {
+            margin: 0!important;
+        }
+
+        .form-row .select2-container {
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 400;
+    
+            .select2-selection {
+                border-radius: 0;
+                border: 1px solid rgba(0,0,0,.1);
+                height: 40px;
+    
+                > span {
+                    line-height: 40px;
+                }
+    
+                .select2-selection__arrow {
+                    height: 40px;
+                }
+            }
+        }
+
+        input[name="save_address"] {
+            border: 0;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 100;
             font-size: 0.7rem;
+            cursor: pointer;
+            background-color: $color-primary;
+            color: #fff;
+            margin-top: 30px;
+            float: right;
+            transition: .3s all;
+
+            &:hover {
+                background-color: lighten($color-primary, 10%);
+            }
         }
     }
 
     .woocommerce-form-row {
         max-width: initial!important;
         margin: 0!important;
+    }
+
+    .woocommerce-button--next,
+    .woocommerce-button--previous {
+        border: 0;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 100;
+        font-size: 0.7rem!important;
+        cursor: pointer;
+        background-color: $color-primary!important;
+        color: #fff!important;
+        margin-top: 30px;
+        transition: .3s all;
     }
 }
 

@@ -9,7 +9,7 @@
 
 ?>
 <div class="container-fluid">
-	<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="page-title">
 			<?php the_title( '<h1 class="title">', '</h1>' ); ?>
 		</div>
@@ -28,5 +28,5 @@
 				) );
 			?>
 		</div>
-	</article><!-- #post-<?php the_ID(); ?> -->
+	</div><!-- #post-<?php the_ID(); ?> -->
 </div>

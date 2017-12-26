@@ -57,11 +57,66 @@ $(document).ready(function() {
         type: 'carousel'
     });
 
-    if($('.woocommerce-message')) {
-        setTimeout(function(){
-            $('.woocommerce-message').fadeOut();
-        }, 2000);
-    }
-
+    // Messages
+    // if($('.woocommerce-message')) {
+    //     setTimeout(function(){
+    //         $('.woocommerce-message').fadeOut();
+    //     }, 3000);
+    // }
 });
+
+// Map    
+function initMap() {
+    var styleArray = [{
+        featureType: 'all',
+        stylers: [{
+            saturation: -80
+        }]
+    }, {
+        featureType: 'road.arterial',
+        elementType: 'geometry',
+        stylers: [{
+            hue: '#00ffee'
+        }, {
+            saturation: 50
+        }]
+    }, {
+        featureType: 'all',
+        elementType: 'labels',
+        stylers: [{
+            visibility: 'off'
+        }]
+    }, {
+        featureType: 'road',
+        elementType: 'labels',
+        stylers: [{
+            visibility: 'on'
+        }]
+    }];
+
+    var image = '../wp-content/themes/aiate/dist/assets/img/poi.jpg';
+    var mapDiv = document.getElementById('map');
+    var map = new google.maps.Map(mapDiv, {
+        center: {
+            lat: 37.395267,
+            lng: -5.9952302
+        },
+        zoom: 16,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        draggable: true,
+        styles: styleArray,
+    });
+
+
+    marker = new google.maps.Marker({
+        map: map,
+        icon: image,
+        draggable: false,
+        position: {
+            lat: 37.395267,
+            lng: -5.9952302
+        },
+    });
+}
 

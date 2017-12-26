@@ -98,12 +98,16 @@ input[type="text"] {
   white-space: nowrap;
 }
 
-.mui-textfield > textarea {
+.mui-textfield > textarea,
+.mui-textfield > span > textarea {
   padding-top: 5px;
+  resize: none;
 }
 
 .mui-textfield > input:focus ~ label,
-.mui-textfield > textarea:focus ~ label {
+.mui-textfield > span > input ~ label,
+.mui-textfield > textarea:focus ~ label,
+.mui-textfield > span > textarea:focus ~ label {
   color: $color-primary;
 }
 
@@ -120,7 +124,8 @@ input[type="text"] {
 }
 
 .mui-textfield--float-label > input:focus ~ label,
-.mui-textfield--float-label > textarea:focus ~ label {
+.mui-textfield--float-label > textarea:focus ~ label
+.mui-textfield > span > textarea:focus ~ label {
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   font-size: 12px;
@@ -154,7 +159,9 @@ input[type="text"] {
 }
 
 .mui-textfield > input,
-.mui-textfield > textarea {
+.mui-textfield > span > input,
+.mui-textfield > textarea,
+.mui-textfield > span > textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
@@ -175,7 +182,9 @@ input[type="text"] {
 }
 
 .mui-textfield > input:focus,
-.mui-textfield > textarea:focus {
+.mui-textfield > span > input:focus,
+.mui-textfield > textarea:focus,
+.mui-textfield > span > textarea:focus {
   border-color: $color-primary;
   border-width: 2px;
 }
@@ -197,41 +206,49 @@ input[type="text"] {
 }
 
 .mui-textfield > input::-webkit-input-placeholder,
+.mui-textfield > span > input::-webkit-input-placeholder,
 .mui-textfield > textarea::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.26);
   opacity: 1;
 }
 
 .mui-textfield > input:-ms-input-placeholder,
+.mui-textfield > span > input:-ms-input-placeholder,
 .mui-textfield > textarea:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.26);
   opacity: 1;
 }
 
 .mui-textfield > input::placeholder,
+.mui-textfield > span > input::placeholder,
 .mui-textfield > textarea::placeholder {
   color: rgba(0, 0, 0, 0.26);
   opacity: 1;
 }
 
-.mui-textfield > input {
+.mui-textfield > input,
+.mui-textfield > span > input {
   height: 32px;
 }
 
-.mui-textfield > input:focus {
+.mui-textfield > input:focus,
+.mui-textfield > span > input:focus {
   height: 33px;
   margin-bottom: -1px;
 }
 
-.mui-textfield > textarea {
+.mui-textfield > textarea,
+.mui-textfield > span > textarea {
   min-height: 64px;
 }
 
-.mui-textfield > textarea[rows]:not([rows="2"]):focus {
+.mui-textfield > textarea[rows]:not([rows="2"]):focus,
+.mui-textfield > span > textarea[rows]:not([rows="2"]):focus {
   margin-bottom: -1px;
 }
 
-.mui-textfield > input:focus {
+.mui-textfield > input:focus,
+.mui-textfield > span > input:focus {
   height: 33px;
   margin-bottom: -1px;
 }

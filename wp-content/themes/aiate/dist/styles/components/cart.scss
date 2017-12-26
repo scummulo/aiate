@@ -67,35 +67,7 @@ div.woocommerce {
             }
         }
     }
-
-    input.update {
-        border: 0;
-        padding: 0;
-        background: 0;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-        font-size: 0.5rem;
-        cursor: pointer;
-
-        &:disabled {
-        }
-    }
-
-    .wc-proceed-to-checkout {
-        text-align: center;
-        padding: 0 20px 20px 20px;
-
-        a {
-            transition: .3s all;
-            background-color: $color-primary!important;
-
-            &:hover {
-                background-color: lighten($color-primary, 10%)!important;
-            } 
-        }
-    }
-
+    
     .coupon {
         display: none;
     }
@@ -144,10 +116,40 @@ div.woocommerce {
 }
 
 .cart-empty {
-    text-align: center;
+    text-align: center!important;
 }
 
 .return-to-shop {
     display: table;
     margin: 0 auto;
+}
+
+.cart_totals.calculated_shipping {
+    float: none!important;
+    width: 100%!important;
+}
+
+.wc-proceed-to-checkout {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+
+    a {
+        transition: .3s all;
+        background-color: $color-primary!important;
+
+        &:hover {
+            background-color: lighten($color-primary, 10%)!important;
+        } 
+    }
+}
+
+input.update {
+    border: 0;
+    padding: 0!important;
+    background: 0!important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 0.5rem!important;
+    cursor: pointer;
 }

@@ -1,0 +1,61 @@
+// Contact
+.page-template-page-contact {
+    .contactForm {
+        max-width: 700px;
+        margin: 0 auto;
+
+        label {
+            font-weight: 600;
+        }
+
+        .primary {
+            display: table;
+            padding: 0;
+            margin: 30px auto 60px;
+            
+            input {
+                cursor: pointer;
+                background: 0;
+                border: 0;
+                padding: 10px 30px;
+                color: #fff;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    #map {
+        height: 50vh;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    .wpcf7-response-output {
+        position: fixed;
+        font-size: 0.8rem;
+        bottom: 0;
+        z-index: 5;
+        left: 0;
+        width: 100%;
+        background: #f1f1f1;
+        border: 0;
+        margin: 0;
+        min-height: 50px;
+        line-height: 50px;
+
+        @media (max-width: 768px) {
+            min-height: initial;
+            line-height: 140%;
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        font-size: 0.6rem;
+        margin-top: 5px;
+    }
+}
