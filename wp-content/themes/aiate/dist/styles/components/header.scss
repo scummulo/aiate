@@ -115,7 +115,7 @@ header {
       }
     }
 
-    .cart-menu {
+    .cart-wrapper {
       position: absolute;
       font-size: 13px;
       font-weight: 100;
@@ -125,15 +125,18 @@ header {
       transition: .3s;
       right: 30px;
       top: 17px;
-      cursor: pointer;
 
-      &:hover {
-        color: $color-secondary;
-
-        span {
-          color: #fff;
+      a {
+        cursor: pointer;
+        &:hover {
+          color: $color-secondary;
+  
+          span {
+            color: #fff;
+          }
         }
       }
+
 
       @media (max-width: 800px) {
         right: 105px;

@@ -21,13 +21,13 @@ $(document).ready(function() {
 
         // Cart
         var $wincart = $(window);
-        var $cart = $('#toggle-cart');
+        var $cart = $('.cart-wrapper');
         
         $wincart.on("click.Bst", function(event){		
             if ($cart.has(event.target).length == 0 && !$cart.is(event.target)){
-                $('#cart').fadeOut();
+                $('.cart-wrapper #cart').fadeOut();
             } else {
-                $('#cart').fadeIn();
+                $('.cart-wrapper #cart').fadeIn();
             }
         });
         

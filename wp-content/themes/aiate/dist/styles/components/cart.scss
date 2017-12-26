@@ -9,8 +9,8 @@ div.woocommerce {
     display: none;
     max-width: 400px;
     position: absolute;
-    right: 15px;
-    top: 45px;
+    right: -15px;
+    top: 30px;
     padding: 0;
     border-radius: 5px;
     background-color: #f1f1f1;
@@ -143,8 +143,9 @@ div.woocommerce {
     }
 }
 
-input.update {
+input.update  {
     border: 0;
+    margin: 10px 0!important;
     padding: 0!important;
     background: 0!important;
     text-transform: uppercase;
@@ -152,4 +153,21 @@ input.update {
     font-weight: 600;
     font-size: 0.5rem!important;
     cursor: pointer;
+}
+
+.coupon {
+    margin-top: 15px;
+
+    input {
+        padding: 5px;
+        color: #333;
+        border: 1px solid rgba(0,0,0,.1);
+        height: 35px;
+        border-radius: 5px;
+
+        @media (max-width: 768px) {
+            width: 100%!important;
+            margin-bottom: 5px!important;
+        }
+    }
 }
