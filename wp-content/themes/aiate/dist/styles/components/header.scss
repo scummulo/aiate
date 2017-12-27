@@ -75,7 +75,9 @@ header {
       }
 
       ul {
-        margin-right: 80px;
+        &#menu-topbar-right {
+          margin-right: 200px;
+        }
 
         @media (max-width: 800px) {
           display: none;
@@ -115,6 +117,86 @@ header {
       }
     }
 
+    .search-wrapper {
+      position: absolute;
+      top: 17px;
+      right: 110px;
+      font-size: 13px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+
+      @media (max-width: 800px) {
+        right: 120px;
+      }
+      
+      a {
+          cursor: pointer;
+          transition: .3s;
+
+          @media (max-width: 768px) {
+            font-size: 0;
+  
+            &:before {
+              content: $aiate-search;
+              font-size: 1rem;
+              font-family: 'Aiate' !important;
+              speak: none;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+            }
+          }
+
+          &:hover {
+              color: $color-secondary;
+      
+              span {
+              color: #fff;
+              }
+          }
+      }
+
+      #search {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          right: 0;
+          width: 310px;
+          border-radius: 5px;
+          top: 28px;
+          z-index: 5;
+          padding: 0 15px;
+
+          @media (max-width: 800px) {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 50px;
+            width: 100%;
+          }
+  
+          &:before {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-left: 7px solid transparent;
+              border-right: 7px solid transparent;
+              border-bottom: 7px solid #f1f1f1;
+              right: 36px;
+              top: -7px;
+
+              @media (max-width: 800px) {
+                right: 138px;
+              }
+          }
+        }
+    }
+
     .cart-wrapper {
       position: absolute;
       font-size: 13px;
@@ -122,12 +204,35 @@ header {
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #fff;
-      transition: .3s;
       right: 30px;
       top: 17px;
 
+      @media (max-width: 800px) {
+        right: 85px;
+      }
+      
       a {
         cursor: pointer;
+        transition: .3s;
+
+        @media (max-width: 768px) {
+          &#toggle-cart {
+            font-size: 0;
+
+            &:before {
+              content: $aiate-shopping-cart;
+              font-size: 1rem;
+              font-family: 'Aiate' !important;
+              speak: none;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+            }
+          }
+        }
+        
         &:hover {
           color: $color-secondary;
   
@@ -135,11 +240,6 @@ header {
             color: #fff;
           }
         }
-      }
-
-
-      @media (max-width: 800px) {
-        right: 105px;
       }
 
       .circle {
@@ -150,6 +250,10 @@ header {
         height: 15px;
         background-color: $color-secondary;
         border-radius: 50%;
+
+        @media (max-width: 800px) {
+          right: 0;
+      }
  
         span {
           font-size: 0.6rem;

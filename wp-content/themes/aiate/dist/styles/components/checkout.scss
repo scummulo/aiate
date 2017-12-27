@@ -88,3 +88,30 @@ form.woocommerce-checkout {
         }
     }
 }
+
+.checkout_coupon {
+    position: fixed;
+    right: 0;
+    bottom: 11px;
+    z-index: 5;
+    padding: 0!important;
+    margin: 0!important;
+    border: 0!important;
+
+    p {
+        max-width: initial!important;
+        margin: 0!important;
+
+        input {
+            font-size: .8rem!important;
+            padding: 5px;
+            border-radius: 5px;
+            border-color: #333;
+            color: #333;
+
+            &::placeholder {
+                color: #333;
+            }
+        }
+    }
+}

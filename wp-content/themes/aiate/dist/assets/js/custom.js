@@ -30,12 +30,18 @@ $(document).ready(function() {
                 $('.cart-wrapper #cart').fadeIn();
             }
         });
-        
+
         // Search
-        $('a[href*="search"]').click(function() {
-            event.preventDefault();	
-            $('#search').fadeToggle();
-        })
+        var $winsearch = $(window);
+        var $search = $('.search-wrapper');
+        
+        $wincart.on("click.Bst", function(event){		
+            if ($search.has(event.target).length == 0 && !$search.is(event.target)){
+                $('.search-wrapper #search').fadeOut();
+            } else {
+                $('.search-wrapper #search').fadeIn();
+            }
+        });
 
     // Sliders
     $('#post-slider').glide({

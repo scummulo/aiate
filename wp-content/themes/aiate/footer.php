@@ -4,7 +4,6 @@
  * @package Aiate
  */
 ?>
-
 	</main><!-- #content -->
 
 	<footer>
@@ -33,7 +32,7 @@
 							Calle Trajano 29 <br>
 							41002 Sevilla <br>
 							666 777 888 <br>
-							hello@aiatecompany.com <br>
+							hola@aiatecompany.com <br>
 							10:00h - 14:00h y 17:30h - 21:00h
 							
 						</p>
@@ -56,6 +55,7 @@
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/glide.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/mui.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/barba.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/custom.min.js"></script>
 
 </body>

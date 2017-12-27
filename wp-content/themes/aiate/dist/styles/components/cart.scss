@@ -7,10 +7,9 @@ div.woocommerce {
 
 #cart {
     display: none;
-    max-width: 400px;
     position: absolute;
     right: -15px;
-    top: 30px;
+    top: 28px;
     padding: 0;
     border-radius: 5px;
     background-color: #f1f1f1;
@@ -18,9 +17,17 @@ div.woocommerce {
     color: #333;
     font-size: 0.7rem;
 
+    table,
+    h2 {
+        text-align: center!important;
+    }
+
     @media (max-width: 800px) {
-        left: 15px;
-        max-width: initial;
+        position: fixed;
+        width: initial;
+        left: 0;
+        right: 0;
+        top: 50px;
     }
 
     &:before {
@@ -35,7 +42,7 @@ div.woocommerce {
         top: -7px;
 
         @media (max-width: 800px) {
-            right: 106px;
+            right: 96px;
         }
     }
 
@@ -59,9 +66,6 @@ div.woocommerce {
 
     .cart-collaterals {
         .cart_totals {
-            float: none;
-            width: 100%;
-
             h2 {
                 padding-top: 0;
             }
@@ -110,6 +114,8 @@ div.woocommerce {
     }
 
     .checkout-button {
+        display: table;
+        margin: 0 auto;
         padding: 15px 30px!important;
         font-weight: 500!important;
     }
@@ -170,4 +176,9 @@ input.update  {
             margin-bottom: 5px!important;
         }
     }
+}
+
+.cart_totals {
+    float: none!important;
+    width: 100%!important;
 }
