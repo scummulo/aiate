@@ -118,12 +118,22 @@ form.woocommerce-checkout {
 
 .woocommerce-checkout #payment ul.payment_methods li img {
     display: inline;
+    width: 45px;
+    height: auto;
 }
 
 .payment_box.payment_method_realex_redirect,
-.payment_box.payment_method_paypal {
+.payment_box.payment_method_paypal,
+.payment_box.payment_method_cod {
     p {
-        margin: 10px 0 0!important;
+        margin: 10px 0 0 0!important;
         max-width: initial!important;
     }
 }
+
+.mc4wp-checkbox.mc4wp-checkbox-woocommerce {
+    max-width: initial!important;
+    margin: 5px 0!important;
+    font-size: 0.8rem!important;
+}
+

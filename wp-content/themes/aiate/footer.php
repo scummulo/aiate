@@ -12,10 +12,8 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<h4>Newsletter</h4>
-						<input type="text" placeholder="Escribe tu correo electrónico" name="" value="">
-						<p>Suscríbete a nuestro newsletter para estar al día de todas nuestras novedades y ofertas</p>
-						<a href="https://www.facebook.com/aiatecompany/">Facebook</a>
-						<a href="https://www.instagram.com/aiatecompany/">Instagram</a>
+						<p class="info">Escribe tu correo para suscribirte a nuestro Newsletter</p>
+						<?php echo do_shortcode( '[contact-form-7 id="646" title="Mailchimp"]' ); ?>
 					</div>
 				</div>
 			</div>
@@ -39,11 +37,11 @@
 					</div>
 					<div class="col-xs-12 col-md-4">
 						<a href="#">Contacto</a>
-						<a href="#">FAQs</a>
-						<a href="#">Envíos</a>
-						<a href="#">Devoluciones</a>
-						<a href="#">Políticas de privacidad</a>
-						<a href="#">Términos y condiciones</a>
+						<a href="https://www.facebook.com/aiatecompany/">Facebook</a>
+						<a href="https://www.instagram.com/aiatecompany/">Instagram</a>
+						<a href="/envios-y-devoluciones">Envíos y devoluciones</a>
+						<a href="/politicas-de-privacidad">Políticas de privacidad</a>
+						<a href="/terminos-y-condiciones">Términos y condiciones</a>
 					</div>
 				</div>
 			</div>
