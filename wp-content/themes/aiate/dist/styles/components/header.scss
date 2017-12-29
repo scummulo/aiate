@@ -30,7 +30,7 @@ header {
           padding: 0;
 
           ul {
-            display: block;
+            display: block!important;
             width: 100%;
     
             li {
@@ -63,6 +63,10 @@ header {
       align-items: center;
       height: 50px;
       padding: 0 30px;
+
+      @media (max-width: 800px) {
+        padding: 0 10px;
+      }
 
       .logo-responsive {
         display: none;
@@ -128,7 +132,8 @@ header {
       color: #fff;
 
       @media (max-width: 800px) {
-        right: 120px;
+        right: 115px;
+        letter-spacing: 0;
       }
       
       a {
@@ -191,7 +196,7 @@ header {
               top: -7px;
 
               @media (max-width: 800px) {
-                right: 138px;
+                right: 116px;
               }
           }
         }
@@ -208,7 +213,8 @@ header {
       top: 17px;
 
       @media (max-width: 800px) {
-        right: 85px;
+        right: 75px;
+        letter-spacing: 0;
       }
       
       a {
@@ -250,10 +256,6 @@ header {
         height: 15px;
         background-color: $color-secondary;
         border-radius: 50%;
-
-        @media (max-width: 800px) {
-          right: 0;
-      }
  
         span {
           font-size: 0.6rem;
@@ -303,8 +305,9 @@ header {
           }
           &.nav-web {
             li {
+              display: inline-block;
+              
               &:last-child {
-                position: inherit;
                 transition: none;
                 
                 a {
@@ -331,17 +334,16 @@ header {
                   left: 0;
                   z-index: 4;
                   width: 100%;
-                  padding: 30px 0 0;
+                  padding: 30px 0;
+                  flex-wrap: wrap;
                   background: #f1f1f1;
                   
                   > li {
-                    padding: 0;
 
                     a {
                       color: #333!important;
                       font-size: 0.8rem;
                       background: 0!important;
-                      padding: 0 60px!important;
                       font-weight: 600!important;
                       border: 0;
 
@@ -356,14 +358,16 @@ header {
             
                     > ul {
                       position: static;
+                      display: block!important;
                       padding: 0;
                       margin: 10px 0 40px 0;
             
-                      > li {
+                      li {
                         display: block;
                         padding: 0;
                         color: #333;
                         text-transform: none;
+                        flex: none;
 
                         &:before {
                           display: none;
@@ -393,8 +397,7 @@ header {
         }
 
         li {
-          display: inline-block;
-          position: relative;
+          flex: 1 1 33.3%;
           letter-spacing: 2px;
           text-transform: uppercase;
           font-weight: 400;

@@ -55,7 +55,6 @@
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/glide.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/mui.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/barba.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/dist/assets/js/custom.min.js"></script>
 
 </body>

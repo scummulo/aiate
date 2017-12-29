@@ -84,6 +84,16 @@ body.single-product {
 
                 input {
                     padding: 8px 0;
+
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+
+                + button {
+                    &:focus {
+                        outline: 0;
+                    }                    
                 }
             }
 

@@ -7,6 +7,10 @@ body {
   letter-spacing: 1px;
   color: #333;
 
+  &.toggled {
+    overflow: hidden;
+  }
+
   main {
     position: relative;
   }
@@ -23,4 +27,9 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+// Text center
+.text-center {
+  text-align: center;
 }

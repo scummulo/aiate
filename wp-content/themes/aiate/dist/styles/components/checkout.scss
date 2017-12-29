@@ -115,3 +115,15 @@ form.woocommerce-checkout {
         }
     }
 }
+
+.woocommerce-checkout #payment ul.payment_methods li img {
+    display: inline;
+}
+
+.payment_box.payment_method_realex_redirect,
+.payment_box.payment_method_paypal {
+    p {
+        margin: 10px 0 0!important;
+        max-width: initial!important;
+    }
+}

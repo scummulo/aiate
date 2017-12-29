@@ -187,3 +187,12 @@ function my_header_add_to_cart_fragment( $fragments ) {
     return $fragments;
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'my_header_add_to_cart_fragment' );
+
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options -> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 12;
+  return $cols;
+}
