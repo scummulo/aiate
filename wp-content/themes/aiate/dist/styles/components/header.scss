@@ -30,12 +30,25 @@ header {
           padding: 0;
 
           ul {
-            display: block!important;
-            width: 100%;
+            &.sub-menu {
+              display: none;
+            }
     
             li {
-              display: block;
-              margin: 20px auto;
+              padding: 0;
+
+              a {
+                display: block;
+                padding: 15px 30px;
+                border-bottom: 1px solid $color-primary;
+                cursor: pointer;
+
+                &.active {
+                  + .sub-menu {
+                    display: block;
+                  }
+                }
+              }
     
               &:before {
                 display: none;
@@ -114,6 +127,15 @@ header {
         color: #fff;
         font-size: 14px;
         letter-spacing: 1px;
+        transition: .3s;
+
+        &:hover {
+          color: $color-secondary;
+        }
+
+        &:focus {
+          outline: 0;
+        }
 
         @media (max-width: 800px) {
           display: block;
@@ -387,11 +409,34 @@ header {
 
         &.sub-menu {
           font-size: 0.9rem;
+          background-color: #f1f1f1;
 
           @media (max-width: 800px) {
             li {
-              margin: 10px 0;
               text-transform: none;
+
+              &.menu-item-has-children {
+                .sub-menu {
+                  display: none;
+
+                  li {
+                    a {
+                      padding: 10px 15px 10px 60px;
+                    }
+                  }
+                }
+              }
+
+              a {
+                border: 0;
+                padding: 10px 15px 10px 40px;
+
+                &.active {
+                  + .sub-menu {
+                    display: block;
+                  }
+                }
+              }
             }
           }
         }
