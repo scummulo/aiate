@@ -19,7 +19,7 @@
               <?php 
               $args = array(
                 'category_name' => 'slider',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
               );
               $the_query = new WP_Query($args);
               ?>
@@ -52,7 +52,15 @@
           <?php
             $args = array(
               'post_type' => 'product',
-              'posts_per_page' => 4
+              'posts_per_page' => 4,
+              'tax_query'      => array(
+                array(
+                  'taxonomy' => 'product_visibility',
+                  'field'    => 'name',
+                  'terms'    => 'featured',
+                  'operator' => 'IN',
+                  )
+                )  
               );
             $loop = new WP_Query( $args );
             if ( $loop->have_posts() ) {
@@ -81,7 +89,12 @@
       <section class="posts">
         <h2 class="section-title"><a class="back "href="<?php echo home_url('/' . 'blog') ?>">Blog</a></h2>
         <div class="row">
-          <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+          <?php 
+            $args = array(
+              'posts_per_page' => 3,
+            );
+            $the_query = new WP_Query($args);
+          ?>
           <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
             <div class="post-card col-sm-12 col-md-4">
              <a class="post-link" href="<?php echo get_permalink(); ?>"></a>
@@ -102,6 +115,7 @@
       <!-- <section class="editorial">
         <h2 class="section-title">Editorial</h2>
         <div class="row">
+
           <div class="post-card col-sm-12 col-md-6">
             <div class="post-image"></div>
             <div class="post-info">
