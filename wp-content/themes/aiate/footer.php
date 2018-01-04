@@ -36,7 +36,7 @@
 						</p>
 					</div>
 					<div class="col-xs-12 col-md-4">
-						<a href="#">Contacto</a>
+						<a href="/contacto">Contacto</a>
 						<a href="https://www.facebook.com/aiatecompany/">Facebook</a>
 						<a href="https://www.instagram.com/aiatecompany/">Instagram</a>
 						<a href="/envios-y-devoluciones">Envíos y devoluciones</a>
