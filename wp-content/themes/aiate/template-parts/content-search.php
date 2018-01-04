@@ -9,14 +9,13 @@
 
 ?>
 
-<div class="post-card col-sm-12 col-md-4">
+<div class="post-card col-sm-12 col-sm-6 col-md-3">
 	<a class="post-link" href="<?php echo get_permalink(); ?>"></a>
 	<div class="post-image" style="background-image: url('<?php the_post_thumbnail_url()?>')"></div>
 	<div class="post-info">
 		<span class="name"><?php the_title(); ?></span>
 	</div>
 </div>
-
 
 
 
