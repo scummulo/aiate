@@ -8,13 +8,14 @@ $(document).ready(function() {
         var $winshop = $(window);
         var $shop = $('.navbar ul li:last-child');
         
-        $winshop.on("click.Bst", function(event){		
+        $winshop.on("mouseover", function(event){		
             if ($shop.has(event.target).length == 0 && !$shop.is(event.target)){
                 $('.navbar ul li:last-child > .sub-menu').fadeOut();
                 $('.navbar ul li:last-child a').removeClass('active');
             } else {
                 $('.navbar ul li:last-child > .sub-menu').fadeIn();
                 $('.navbar ul li:last-child > .sub-menu').css('display','flex');
+                $('.navbar ul li:last-child > .sub-menu:before').css('top','-30px');
                 $('.navbar ul li:last-child a').addClass('active');
             }
         });
