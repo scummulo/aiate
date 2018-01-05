@@ -10,12 +10,16 @@ $(document).ready(function() {
         
         $winshop.on("mouseover", function(event){		
             if ($shop.has(event.target).length == 0 && !$shop.is(event.target)){
-                $('.navbar ul li:last-child > .sub-menu').fadeOut();
+                $('.navbar ul li:last-child > .sub-menu').css('opacity','0');
+                setTimeout(function(){
+                    $('.navbar ul li:last-child > .sub-menu').css('display','none');
+                }, 50);
                 $('.navbar ul li:last-child a').removeClass('active');
             } else {
-                $('.navbar ul li:last-child > .sub-menu').fadeIn();
+                setTimeout(function(){
+                    $('.navbar ul li:last-child > .sub-menu').css('opacity','1');
+                }, 50);
                 $('.navbar ul li:last-child > .sub-menu').css('display','flex');
-                $('.navbar ul li:last-child > .sub-menu:before').css('top','-30px');
                 $('.navbar ul li:last-child a').addClass('active');
             }
         });
