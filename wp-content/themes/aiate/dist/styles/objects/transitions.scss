@@ -1,0 +1,32 @@
+// Transitions
+@-webkit-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 20px, 0);
+    }
+    45% {
+      opacity: .5;
+      -webkit-transform: translate3d(0, 5px, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+              transform: translate3d(0, 20px, 0);
+    }
+    45% {
+      opacity: .5;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+              transform: translate3d(0, 5px, 0);
+    }
+    100% {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+              transform: none;
+    }
+  }

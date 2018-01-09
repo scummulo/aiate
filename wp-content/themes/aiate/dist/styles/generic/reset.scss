@@ -6,6 +6,11 @@ body {
   font-size: 16px;
   letter-spacing: 1px;
   color: #333;
+  opacity: 0;
+  animation: fadeInUp .75s ease forwards .25s;
+  -webkit-animation: fadeInUp .75s ease forwards .25s;
+  -webkit-transform-origin: center 20%;
+  transform-origin: center 20%;
 
   &.toggled {
     position: relative!important;
