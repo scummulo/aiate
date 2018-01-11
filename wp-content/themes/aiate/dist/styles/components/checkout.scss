@@ -32,7 +32,8 @@ form.woocommerce-checkout {
     }
 }
 
-.woocommerce-billing-fields {
+.woocommerce-billing-fields,
+.woocommerce-shipping-fields {
     .form-row .select2-container {
         padding: 0;
         font-size: 1rem;
@@ -135,5 +136,9 @@ form.woocommerce-checkout {
     max-width: initial!important;
     margin: 5px 0!important;
     font-size: 0.8rem!important;
+}
+
+#ship-to-different-address label {
+    font-size: 1.17em;
 }
 

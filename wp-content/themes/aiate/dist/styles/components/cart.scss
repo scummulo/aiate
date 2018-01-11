@@ -182,3 +182,21 @@ input.update  {
     float: none!important;
     width: 100%!important;
 }
+
+#shipping_method {
+    text-align: left;
+    margin: 10px 0;
+
+    li {
+        display: block;
+        text-transform: none;
+        margin: 0!important;
+        color: #333;
+        font-size: 0.6rem;
+        padding: 0!important;
+
+        label {
+            font-weight: 400;
+        }
+    }
+}

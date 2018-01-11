@@ -162,7 +162,7 @@ header {
           cursor: pointer;
           transition: .3s;
 
-          @media (max-width: 768px) {
+          @media (max-width: 800px) {
             font-size: 0;
   
             &:before {
@@ -243,7 +243,7 @@ header {
         cursor: pointer;
         transition: .3s;
 
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
           &#toggle-cart {
             font-size: 0;
 

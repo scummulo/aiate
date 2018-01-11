@@ -27,9 +27,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="product-card col-xs-6 col-sm-6 col-md-3">
+
+<div class="product-card col-xs-6 col-sm-6 col-md-4">
 	<a class="product-link" href="<?php echo get_permalink(); ?>"></a>
-	<?php woocommerce_template_loop_product_thumbnail(); ?>             
+	<?php woocommerce_template_loop_product_thumbnail(); ?>
 	<div class="product-info">                      
 		<?php woocommerce_template_single_meta(); ?>
 		<span class="name">
