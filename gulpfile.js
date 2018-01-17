@@ -66,8 +66,7 @@ gulp.task('cache', function () {
 // Browser-sync
 gulp.task('browserSync', ['sass', 'scripts', 'cache'], function() {
   browserSync.init([OUT.css + '*', IN.sass + '/*', OUT.js + '*', './**/*.php'], {
-    proxy: serverAlias,
-    port: 8080
+    proxy: serverAlias
   })
 });
 
