@@ -17,12 +17,12 @@ body {
     position: relative;
 
     @media (min-width: 768px) {
-        opacity: 0;
-        animation: fadeInUp .75s ease forwards .25s;
-        -webkit-animation: fadeInUp .75s ease forwards .25s;
-        -webkit-transform-origin: center 20%;
-        transform-origin: center 20%;
-      }
+      opacity: 0;
+      animation: fadeInUp .75s ease forwards .25s;
+      -webkit-animation: fadeInUp .75s ease forwards .25s;
+      -webkit-transform-origin: center 20%;
+      transform-origin: center 20%;
+    }
   }
 }
 
