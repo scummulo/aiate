@@ -16,9 +16,14 @@
 
 	gtag('config', 'UA-111747613-1');
 	</script>
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta name="description" content="Sevillian clothiers">
+	<meta name="keywords" content="Aiate, traje, chaqueta, corbata, camisa, pantalon">
+	<meta name="author" content="Aiate">
+	
 	<?php wp_head(); ?>
 </head>
 
