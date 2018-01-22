@@ -18,7 +18,7 @@
           <ul class="glide__track">
               <?php 
               $args = array(
-                'category_name' => 'slider',
+                'tag' => 'slider',
                 'posts_per_page' => -1,
               );
               $the_query = new WP_Query($args);
