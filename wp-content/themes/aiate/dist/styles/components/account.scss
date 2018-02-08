@@ -17,6 +17,10 @@ nav.woocommerce-MyAccount-navigation {
             margin-right: 30px;
             margin-bottom: 5px;
 
+            a {
+                color: #333!important;
+            }
+
             @media (max-width: 768px) {
                 display: block;
                 margin-right: 0;

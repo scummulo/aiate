@@ -3,6 +3,37 @@ header {
   width: 100%;
   z-index: 99999;
 
+  .trp-language-switcher {
+    position: absolute;
+    left: 30px;
+
+    @media (max-width: 800px) {
+      right: 135px;
+      top: 13px;
+      left: initial;
+    }
+
+    .trp-language-switcher-select {
+      background: 0;
+      padding: 0;
+      border: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: white;
+      font-size: 13px;
+      font-weight: 100;
+      cursor: pointer;
+      color: #fff;
+      padding-right: 18px;
+      border-right: 1px solid white;
+      border-radius: 0;
+    }
+  }
+
+  #menu-topbar-left {
+    margin-left: 55px;
+  }
+
   @media (max-width: 800px) {
     position: fixed;
     right: 0;
@@ -25,7 +56,7 @@ header {
         overflow-y: auto;
 
         .container-fluid {
-          display: inline-block!important;
+          display: inline-block !important;
           height: 100%;
           padding: 0;
 
@@ -33,7 +64,7 @@ header {
             &.sub-menu {
               display: none;
             }
-    
+
             li {
               padding: 0;
 
@@ -49,7 +80,7 @@ header {
                   }
                 }
               }
-    
+
               &:before {
                 display: none;
               }
@@ -98,7 +129,7 @@ header {
         }
 
         @media (max-width: 800px) {
-          display: none!important;
+          display: none !important;
         }
 
         li {
@@ -109,12 +140,12 @@ header {
           text-transform: uppercase;
           margin-right: 30px;
           color: #fff;
-          transition: .3s;
+          transition: 0.3s;
 
           &:hover {
             color: $color-secondary;
           }
-  
+
           &:last-child {
             margin-right: 0;
           }
@@ -128,7 +159,7 @@ header {
         color: #fff;
         font-size: 14px;
         letter-spacing: 1px;
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
           color: $color-secondary;
@@ -159,71 +190,71 @@ header {
         margin-right: 15px;
         letter-spacing: 0;
       }
-      
+
       a {
-          cursor: pointer;
-          transition: .3s;
+        cursor: pointer;
+        transition: 0.3s;
 
-          @media (max-width: 800px) {
-            font-size: 0;
-  
-            &:before {
-              content: $aiate-search;
-              font-size: 1rem;
-              font-family: 'Aiate' !important;
-              speak: none;
-              font-style: normal;
-              font-weight: normal;
-              font-variant: normal;
-              text-transform: none;
-              line-height: 1;
-            }
-          }
+        @media (max-width: 800px) {
+          font-size: 0;
 
-          &:hover {
-              color: $color-secondary;
-      
-              span {
-              color: #fff;
-              }
+          &:before {
+            content: $aiate-search;
+            font-size: 1rem;
+            font-family: "Aiate" !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
           }
+        }
+
+        &:hover {
+          color: $color-secondary;
+
+          span {
+            color: #fff;
+          }
+        }
       }
 
       #search {
-          display: none;
-          position: absolute;
-          background-color: #f1f1f1;
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        right: 0;
+        width: 310px;
+        border-radius: 5px;
+        top: 28px;
+        z-index: 5;
+        padding: 0 15px;
+
+        @media (max-width: 800px) {
+          position: fixed;
+          left: 0;
           right: 0;
-          width: 310px;
-          border-radius: 5px;
-          top: 28px;
-          z-index: 5;
-          padding: 0 15px;
+          top: 50px;
+          width: 100%;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid #f1f1f1;
+          right: 36px;
+          top: -7px;
 
           @media (max-width: 800px) {
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 50px;
-            width: 100%;
-          }
-  
-          &:before {
-              content: '';
-              position: absolute;
-              width: 0;
-              height: 0;
-              border-left: 7px solid transparent;
-              border-right: 7px solid transparent;
-              border-bottom: 7px solid #f1f1f1;
-              right: 36px;
-              top: -7px;
-
-              @media (max-width: 800px) {
-                right: 112px;
-              }
+            right: 112px;
           }
         }
+      }
     }
 
     .cart-wrapper {
@@ -238,10 +269,10 @@ header {
       @media (max-width: 800px) {
         letter-spacing: 0;
       }
-      
+
       a {
         cursor: pointer;
-        transition: .3s;
+        transition: 0.3s;
 
         @media (max-width: 800px) {
           &#toggle-cart {
@@ -250,7 +281,7 @@ header {
             &:before {
               content: $aiate-shopping-cart;
               font-size: 1rem;
-              font-family: 'Aiate' !important;
+              font-family: "Aiate" !important;
               speak: none;
               font-style: normal;
               font-weight: normal;
@@ -260,10 +291,10 @@ header {
             }
           }
         }
-        
+
         &:hover {
           color: $color-secondary;
-  
+
           span {
             color: #fff;
           }
@@ -278,14 +309,14 @@ header {
         height: 15px;
         background-color: $color-secondary;
         border-radius: 50%;
- 
+
         span {
           font-size: 0.6rem;
           letter-spacing: 0;
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-50%,-50%);
+          transform: translate(-50%, -50%);
         }
       }
     }
@@ -319,7 +350,7 @@ header {
           display: none;
         }
       }
-  
+
       ul {
         @media (min-width: 800px) {
           &.nav-mobile {
@@ -328,15 +359,15 @@ header {
           &.nav-web {
             li {
               display: inline-block;
-              
+
               &:last-child {
                 transition: none;
-                
+
                 a {
                   border: 1px solid $color-primary;
                   padding: 5px 15px;
                   cursor: pointer;
-                  transition: .3s;
+                  transition: 0.3s;
 
                   &.active {
                     background-color: $color-primary;
@@ -360,41 +391,40 @@ header {
                   flex-wrap: wrap;
                   background: #f1f1f1;
                   opacity: 0;
-                  transition: .2s;
+                  transition: 0.2s;
 
                   &:before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     right: 0;
                     top: -80px;
                     width: 200px;
                     height: 80px;
                   }
-                  
-                  > li {
 
+                  > li {
                     a {
-                      color: #333!important;
+                      color: #333 !important;
                       font-size: 0.8rem;
-                      background: 0!important;
-                      font-weight: 600!important;
+                      background: 0 !important;
+                      font-weight: 600 !important;
                       border: 0;
 
                       &:hover {
                         background: 0;
                       }
                     }
-            
+
                     &:before {
                       display: none;
                     }
-            
+
                     > ul {
                       position: static;
-                      display: block!important;
+                      display: block !important;
                       padding: 0;
                       margin: 10px 0 40px 0;
-            
+
                       li {
                         display: block;
                         padding: 0;
@@ -405,9 +435,9 @@ header {
                         &:before {
                           display: none;
                         }
-                        
+
                         a {
-                          font-weight: 100!important;
+                          font-weight: 100 !important;
                         }
                       }
                     }
@@ -459,14 +489,14 @@ header {
           font-weight: 400;
           padding: 0 30px;
           color: $color-primary;
-          transition: .3s;
+          transition: 0.3s;
 
           &:hover {
             color: darken($color-primary, 20%);
           }
-  
+
           &:before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             bottom: 0;
@@ -477,7 +507,7 @@ header {
 
           &:last-child {
             padding-right: 0;
-  
+
             &:before {
               display: none;
             }

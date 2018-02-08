@@ -12,6 +12,26 @@
     padding: 0;
     background-color: #f1f1f1;
 
+    &.notice {
+        background-color: $color-secondary;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
+
+        + * {
+            #coupon_code {
+                border-color: #fff;
+                color: #fff;
+    
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
     &.error {
         background: #a00;
         color: white;
@@ -89,6 +109,7 @@
                 margin-bottom: 5px;
             }
         }
+
     }
 }
 

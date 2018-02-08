@@ -36,6 +36,8 @@
 						<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo-white.png" alt="aiate-logo"></a>
 					</div>
 
+					<?php echo do_shortcode( '[language-switcher]' ); ?>
+
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'topbar_left',

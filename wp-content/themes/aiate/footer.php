@@ -29,7 +29,7 @@
 						<p>
 							Calle Trajano 29 <br>
 							41002 Sevilla <br>
-							666 777 888 <br>
+							955 463 453 <br>
 							hola@aiatecompany.com <br>
 							10:00h - 14:00h y 17:30h - 21:00h
 							
@@ -40,8 +40,8 @@
 						<a href="https://www.facebook.com/aiatecompany/">Facebook</a>
 						<a href="https://www.instagram.com/aiatecompany/">Instagram</a>
 						<a href="/envios-y-devoluciones">Envíos y devoluciones</a>
-						<a href="/politicas-de-privacidad">Políticas de privacidad</a>
 						<a href="/terminos-y-condiciones">Términos y condiciones</a>
+						<br>
 					</div>
 				</div>
 			</div>

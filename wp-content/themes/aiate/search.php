@@ -16,7 +16,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<div class="search-title">
-			<?php printf( esc_html__( 'Search Results for: %s', 'aiate' ), '<span>' . get_search_query() . '</span>' ); ?>
+			<?php printf( esc_html__( 'Resultados de: %s', 'aiate' ), '<span>' . get_search_query() . '</span>' ); ?>
 			</div>
 			<div class="row">
 				<?php

@@ -87,7 +87,7 @@
 
       <!-- Posts -->
       <section class="posts">
-        <h2 class="section-title"><a class="back "href="<?php echo home_url('/' . 'blog') ?>">Blog</a></h2>
+        <h2 class="section-title"><a class="back "href="<?php echo home_url('/' . 'blog') ?>">Gaceta</a></h2>
         <div class="row">
           <?php 
             $args = array(
